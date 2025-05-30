@@ -1,0 +1,10 @@
+.styles {
+  --var----------: #0F27A2;
+  --var-------: #29497F;
+  --var--------------: #3515B0;
+  --modal: #057D9F;
+}
+.var---------- { color: var(--var----------); }
+.var------- { color: var(--var-------); }
+.var-------------- { color: var(--var--------------); }
+.modal { color: var(--modal); }

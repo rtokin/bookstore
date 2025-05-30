@@ -1,0 +1,170 @@
+.fontIcon {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.logoIcon {
+  width: 98.3px;
+  position: relative;
+  height: 79px;
+}
+
+.streetbook {
+  position: relative;
+  text-shadow: 0px 4.068169116973877px 4.07px rgba(0, 0, 0, 0.25);
+}
+
+.b {
+  position: relative;
+  font-size: 25.59px;
+  letter-spacing: 0.2em;
+}
+
+.logo {
+  width: 539.3px;
+  margin: 0 !important;
+  position: absolute;
+  top: 99px;
+  right: 241.7px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 0px 4px;
+  z-index: 1;
+}
+
+.logoIcon1 {
+  width: 29px;
+  position: relative;
+  height: 28px;
+}
+
+.div {
+  position: relative;
+}
+
+.profile {
+  width: 237px;
+  border-radius: 30.23px;
+  background-color: #0f27a2;
+  height: 53px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 21px;
+  box-sizing: border-box;
+  gap: 0px;
+  cursor: pointer;
+  z-index: 0;
+}
+
+.iconMagnifyingGlass {
+  width: 29px;
+  height: 30px;
+}
+
+.searchbar {
+  width: 237px;
+  margin: 0 !important;
+  position: absolute;
+  top: 92.5px;
+  left: 0px;
+  border-radius: 30.23px;
+  background-color: #0f27a2;
+  height: 53px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 12px 21px;
+  box-sizing: border-box;
+  gap: 9px;
+  z-index: 1;
+}
+
+.buttonsChild {
+  width: 237px;
+  position: relative;
+  border-radius: 30.23px;
+  height: 53px;
+  z-index: 2;
+}
+
+.div1 {
+  width: 52px;
+  position: absolute;
+  margin: 0 !important;
+  top: calc(50% + 82px);
+  left: 59px;
+  display: inline-block;
+  z-index: 3;
+}
+
+.iconInfo {
+  width: 13.8px;
+  margin: 0 !important;
+  position: absolute;
+  top: calc(50% + 78px);
+  left: 28px;
+  height: 27.5px;
+  z-index: 4;
+}
+
+.buttons {
+  margin: 0 !important;
+  position: absolute;
+  top: 369px;
+  left: 1441px;
+  height: 238px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0px;
+  opacity: 0.73;
+  z-index: 2;
+  font-size: 20px;
+  color: #fff;
+  font-family: Roboto;
+}
+
+.sideDownIcon {
+  width: 54px;
+  margin: 0 !important;
+  position: absolute;
+  bottom: 38px;
+  left: calc(50% - 27px);
+  border-radius: 27px;
+  height: 54px;
+  opacity: 0.7;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.header {
+  width: 100%;
+  position: relative;
+  background-color: #fff;
+  height: 900px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 10px;
+  text-align: center;
+  font-size: 97.64px;
+  color: #0f27a2;
+  font-family: 'Roboto Condensed';
+}
