@@ -1,6 +1,3 @@
-/**
- * Тип для одного объекта карточки из JSON-экспорта Figma
- */
 export interface ProductCaseItem {
   id: number;
   section: 'new' | 'best' | 'coming';
@@ -11,7 +8,5 @@ export interface ProductCaseItem {
   stars: string[];
 }
 
-/**
- * Тип всего массива карточек
- */
+/** Тип всего JSON-массива карточек */
 export type ProductCaseData = ProductCaseItem[];

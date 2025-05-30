@@ -1,0 +1,229 @@
+.footerChild {
+  	flex: 1;
+  	position: relative;
+  	background-color: #272727;
+  	height: 698px;
+  	z-index: 0;
+}
+.themeChild {
+  	position: absolute;
+  	top: 373.5px;
+  	left: calc(50% - 345.5px);
+  	border-top: 1px solid #fff;
+  	box-sizing: border-box;
+  	width: 761px;
+  	height: 1px;
+}
+.div {
+  	position: absolute;
+  	top: 0px;
+  	left: 4px;
+  	font-size: 24px;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 208px;
+  	height: 67px;
+}
+.div1 {
+  	position: absolute;
+  	top: 0px;
+  	left: calc(50% - 102px);
+  	font-size: 24px;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 208px;
+  	height: 67px;
+}
+.div2 {
+  	position: absolute;
+  	top: 0px;
+  	right: 0px;
+  	font-size: 24px;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 208px;
+  	height: 67px;
+}
+.div3 {
+  	position: absolute;
+  	top: 91px;
+  	left: calc(50% - 102px);
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 208px;
+  	height: 67px;
+}
+.div4 {
+  	position: absolute;
+  	top: 182px;
+  	left: calc(50% - 102px);
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 208px;
+  	height: 67px;
+}
+.div5 {
+  	position: absolute;
+  	top: 273px;
+  	left: calc(50% - 102px);
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 208px;
+  	height: 67px;
+}
+.div6 {
+  	position: absolute;
+  	top: 91px;
+  	right: 0px;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 208px;
+  	height: 67px;
+}
+.div7 {
+  	position: absolute;
+  	top: 182px;
+  	right: 0px;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 208px;
+  	height: 67px;
+}
+.div8 {
+  	position: absolute;
+  	top: 273px;
+  	right: 0px;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 208px;
+  	height: 67px;
+}
+.streetbook {
+  	position: absolute;
+  	top: 375px;
+  	left: calc(50% - 80px);
+  	font-size: 17.93px;
+  	color: #c0bdbd;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 165px;
+  	height: 52.9px;
+}
+.div9 {
+  	position: absolute;
+  	top: 91px;
+  	left: 4px;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 208px;
+  	height: 67px;
+}
+.div10 {
+  	position: absolute;
+  	top: 182px;
+  	left: 2px;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 208px;
+  	height: 67px;
+}
+.div11 {
+  	position: absolute;
+  	top: 273px;
+  	left: 0px;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 208px;
+  	height: 67px;
+}
+.theme {
+  	width: 1460px;
+  	position: absolute;
+  	margin: 0 !important;
+  	top: 48px;
+  	left: calc(50% - 730px);
+  	height: 427.9px;
+  	z-index: 1;
+}
+.heftyfkgmailcom {
+  	position: absolute;
+  	right: 0px;
+  	bottom: 42px;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 208px;
+  	height: 67px;
+}
+.telegram1Icon {
+  	position: absolute;
+  	right: 32px;
+  	bottom: 0px;
+  	width: 42px;
+  	height: 42px;
+  	object-fit: cover;
+}
+.discord1Icon {
+  	position: absolute;
+  	right: 166px;
+  	bottom: 0px;
+  	width: 42px;
+  	height: 42px;
+  	object-fit: cover;
+}
+.vk1Icon {
+  	position: absolute;
+  	right: 99px;
+  	bottom: 0px;
+  	width: 42px;
+  	height: 42px;
+  	object-fit: cover;
+}
+.iconHeadphones {
+  	position: absolute;
+  	right: 191.7px;
+  	bottom: 66.1px;
+  	width: 27.3px;
+  	height: 23.9px;
+}
+.teh {
+  	width: 219px;
+  	position: absolute;
+  	margin: 0 !important;
+  	right: 0px;
+  	bottom: 151px;
+  	height: 109px;
+  	z-index: 2;
+}
+.footer {
+  	width: 100%;
+  	position: relative;
+  	background-color: #fff;
+  	overflow: hidden;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: flex-start;
+  	justify-content: center;
+  	gap: 10px;
+  	text-align: center;
+  	font-size: 20px;
+  	color: #fff;
+  	font-family: 'Roboto Condensed';
+}
+
