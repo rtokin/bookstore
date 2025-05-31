@@ -1,427 +1,470 @@
 .unsplashrarnGq1sbaIcon {
-  	position: absolute;
-  	top: 0px;
-  	left: 0px;
-  	width: 1917px;
-  	height: 789.3px;
-  	object-fit: contain;
-  	opacity: 0;
-}
-.unsplashrarnGq1sbaIcon1 {
-  	position: absolute;
-  	top: 789.33px;
-  	left: 0px;
-  	width: 1917px;
-  	height: 789.3px;
-  	object-fit: contain;
-  	opacity: 0;
-}
-.unsplashrarnGq1sbaIcon2 {
-  	position: absolute;
-  	top: 1578.67px;
-  	left: 0px;
-  	width: 1917px;
-  	height: 789.3px;
-  	object-fit: contain;
-  	opacity: 0;
-}
-.unsplashDank9gjvdyIcon {
-  	position: absolute;
-  	top: 0px;
-  	left: 0px;
-  	width: 1917px;
-  	height: 789.3px;
-  	object-fit: contain;
-  	opacity: 0.1;
-}
-.unsplashDank9gjvdyIcon1 {
-  	position: absolute;
-  	top: 789.33px;
-  	left: 0px;
-  	width: 1917px;
-  	height: 789.3px;
-  	object-fit: contain;
-  	opacity: 0.1;
-}
-.unsplashDank9gjvdyIcon2 {
-  	position: absolute;
-  	top: 1578.67px;
-  	left: 0px;
-  	width: 1917px;
-  	height: 789.3px;
-  	object-fit: contain;
-  	opacity: 0.1;
-}
-.font {
-  	position: absolute;
-  	top: 0px;
-  	left: 2px;
-  	width: 1917px;
-  	height: 2368px;
-}
-.profileIcon {
-  	position: absolute;
-  	top: 22px;
-  	right: 53px;
-  	width: 61px;
-  	height: 61px;
-  	cursor: pointer;
-}
-.iconMagnifyingGlass {
-  	width: 29px;
-  	height: 30px;
-}
-.div {
-  	position: relative;
-}
-.searchbar {
-  	position: absolute;
-  	top: 28px;
-  	right: 331px;
-  	border-radius: 30.23px;
-  	background-color: #0f27a2;
-  	width: 237px;
-  	height: 53px;
-  	display: flex;
-  	flex-direction: row;
-  	align-items: center;
-  	justify-content: flex-start;
-  	padding: 11px 21px;
-  	box-sizing: border-box;
-  	gap: 10px;
-}
-.logoIcon {
-  	width: 52.5px;
-  	position: relative;
-  	max-height: 100%;
-  	overflow: hidden;
-  	flex-shrink: 0;
-}
-.streetbook {
-  	position: relative;
-  	text-shadow: 0px 2.1727077960968018px 2.17px rgba(0, 0, 0, 0.25);
-}
-.b {
-  	position: relative;
-  	font-size: 13.67px;
-  	letter-spacing: 0.2em;
-}
-.logo {
-  	position: absolute;
-  	top: 17px;
-  	left: 40px;
-  	width: 288px;
-  	display: flex;
-  	flex-direction: row;
-  	align-items: center;
-  	justify-content: center;
-  	flex-wrap: wrap;
-  	align-content: center;
-  	gap: 0px 2.1px;
-  	font-size: 52.14px;
-  	color: #0f27a2;
-  	font-family: 'Roboto Condensed';
-}
-.backetChild {
-  	position: absolute;
-  	height: 100%;
-  	width: 100%;
-  	top: 0%;
-  	right: 0%;
-  	bottom: 0%;
-  	left: 0%;
-  	border-radius: 30.23px;
-  	max-width: 100%;
-  	overflow: hidden;
-  	max-height: 100%;
-}
-.iconCart {
-  	position: absolute;
-  	width: 40.86%;
-  	top: 13px;
-  	right: 35.48%;
-  	left: 23.66%;
-  	max-width: 100%;
-  	overflow: hidden;
-  	height: 28.5px;
-}
-.backetItem {
-  	position: absolute;
-  	height: calc(100% - 31px);
-  	width: calc(100% - 71px);
-  	top: 3px;
-  	right: 22px;
-  	bottom: 28px;
-  	left: 49px;
-  	border-radius: 50%;
-  	background-color: #d54a4a;
-}
-.div1 {
-  	position: absolute;
-  	top: calc(50% - 20.36px);
-  	left: calc(50% + 9.57px);
-  	display: flex;
-  	align-items: center;
-  	justify-content: center;
-  	width: 7.9px;
-  	height: 15.7px;
-}
-.backet {
-  	position: absolute;
-  	top: 28px;
-  	right: 176px;
-  	width: 93px;
-  	height: 53px;
-  	cursor: pointer;
-  	font-size: 15.71px;
-}
-.navbar {
-  	position: absolute;
-  	width: calc(100% - 0.5px);
-  	top: 0px;
-  	right: 0.5px;
-  	left: 0px;
-  	box-shadow: 0px -17px 160.6px 4px rgba(0, 0, 0, 0.05) inset;
-  	background-color: #fff;
-  	height: 133px;
-  	overflow: hidden;
-  	color: #fff;
-  	font-family: Roboto;
-}
-.b1 {
-  	position: absolute;
-  	top: 217.06px;
-  	left: calc(50% - 223.25px);
-  	font-size: 48.38px;
-  	display: flex;
-  	align-items: center;
-  	justify-content: center;
-  	width: 450px;
-  	height: 124.1px;
-}
-.b2 {
-  	position: absolute;
-  	top: 936.14px;
-  	left: calc(50% - 360.25px);
-  	font-size: 48.38px;
-  	display: flex;
-  	align-items: center;
-  	justify-content: center;
-  	width: 721px;
-  	height: 124px;
-}
-.b3 {
-  	position: absolute;
-  	top: 1686px;
-  	left: calc(50% - 253.25px);
-  	font-size: 48.38px;
-  	display: flex;
-  	align-items: center;
-  	justify-content: center;
-  	width: 507px;
-  	height: 93.1px;
-}
-.arrowsIcon {
-  	width: 41.2px;
-  	height: 69.3px;
-}
-.productphotoIcon {
-  	position: absolute;
-  	height: 80.77%;
-  	width: 100%;
-  	top: -3.42%;
-  	right: 0%;
-  	bottom: 22.65%;
-  	left: 0%;
-  	border-radius: 13px;
-  	max-width: 100%;
-  	overflow: hidden;
-  	max-height: 100%;
-  	object-fit: cover;
-}
-.descriptionofbook {
-  	position: absolute;
-  	top: 83.97%;
-  	left: 0px;
-}
-.authorofbook {
-  	position: absolute;
-  	top: 88.89%;
-  	left: 0px;
-  	font-size: 14px;
-  	font-weight: 300;
-}
-.priceofbook {
-  	position: absolute;
-  	top: 77.99%;
-  	left: 0px;
-  	font-size: 23.66px;
-  	font-weight: 800;
-  	color: #d54a4a;
-}
-.buybox {
-  	position: absolute;
-  	bottom: 0px;
-  	left: 0px;
-  	border-radius: 16.5px;
-  	background-color: #29497f;
-  	width: 138.8px;
-  	height: 33px;
-  	cursor: pointer;
-}
-.buy {
-  	position: absolute;
-  	bottom: 6.03px;
-  	left: 47.79px;
-  	font-size: 15.93px;
-  	font-weight: 300;
-  	color: #fff;
-}
-.starbox {
-  	position: absolute;
-  	height: 3.42%;
-  	top: 79.27%;
-  	right: 38px;
-  	bottom: 17.31%;
-  	border-radius: 6px;
-  	background-color: #ebebeb;
-  	width: 92px;
-}
-.productCaseChild {
-  	position: absolute;
-  	height: 2.14%;
-  	top: 79.91%;
-  	right: 116.5px;
-  	bottom: 17.95%;
-  	max-height: 100%;
-  	width: 10px;
-}
-.productCaseItem {
-  	position: absolute;
-  	height: 2.14%;
-  	top: 79.91%;
-  	right: 98.5px;
-  	bottom: 17.95%;
-  	max-height: 100%;
-  	width: 10px;
-}
-.productCaseInner {
-  	position: absolute;
-  	height: 2.14%;
-  	top: 79.91%;
-  	right: 79.5px;
-  	bottom: 17.95%;
-  	max-height: 100%;
-  	width: 10px;
-}
-.starIcon {
-  	position: absolute;
-  	height: 2.14%;
-  	top: 79.91%;
-  	right: 60.5px;
-  	bottom: 17.95%;
-  	max-height: 100%;
-  	width: 10px;
-}
-.productCaseChild1 {
-  	position: absolute;
-  	height: 2.14%;
-  	top: 79.91%;
-  	right: 41.5px;
-  	bottom: 17.95%;
-  	max-height: 100%;
-  	width: 10px;
-}
-.productCase {
-  	width: 251px;
-  	position: relative;
-  	height: 468px;
-}
-.arrowsIcon1 {
-  	width: 41.7px;
-  	height: 69.3px;
-}
-.fullgroupcarouselcomingsoonboo {
-  	position: absolute;
-  	width: calc(100% - 1px);
-  	top: 1797px;
-  	right: 1px;
-  	left: 0px;
-  	background-color: rgba(255, 255, 255, 0);
-  	overflow: hidden;
-  	display: flex;
-  	flex-direction: row;
-  	align-items: center;
-  	justify-content: center;
-  	padding: 45px 36px;
-  	box-sizing: border-box;
-  	gap: 56px;
-  	text-align: left;
-  	color: #000;
-  	font-family: 'Roboto Condensed';
-}
-.fullgroupcarouselbestofthebest {
-  	position: absolute;
-  	top: 1084px;
-  	left: calc(50% - 959.25px);
-  	background-color: rgba(255, 255, 255, 0);
-  	width: 1919.5px;
-  	overflow: hidden;
-  	display: flex;
-  	flex-direction: row;
-  	align-items: center;
-  	justify-content: center;
-  	padding: 45px 36px;
-  	box-sizing: border-box;
-  	gap: 56px;
-  	text-align: left;
-  	color: #000;
-  	font-family: 'Roboto Condensed';
-}
-.priceofbook11 {
-  	position: absolute;
-  	top: 77.99%;
-  	left: 0px;
-  	font-size: 23.66px;
-  	font-weight: 800;
-  	color: #d54a4a;
-  	white-space: pre-wrap;
-}
-.fullgroupcarouselnewestbooks {
-  	position: absolute;
-  	top: 388px;
-  	left: calc(50% - 959.25px);
-  	background-color: rgba(255, 255, 255, 0);
-  	width: 1919.5px;
-  	overflow: hidden;
-  	display: flex;
-  	flex-direction: row;
-  	align-items: center;
-  	justify-content: center;
-  	padding: 45px 36px;
-  	box-sizing: border-box;
-  	gap: 56px;
-  	text-align: left;
-  	color: #000;
-  	font-family: 'Roboto Condensed';
-}
-.body1 {
-  	position: absolute;
-  	top: 0px;
-  	left: 0px;
-  	width: 1920.5px;
-  	height: 2368px;
-}
-.body {
-  	width: 100%;
-  	position: relative;
-  	background-color: #fff;
-  	height: 2368px;
-  	overflow: hidden;
-  	flex-shrink: 0;
-  	text-align: center;
-  	font-size: 20px;
-  	color: #0f27a2;
-  	font-family: 'Roboto Serif';
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 1917px;
+	height: 789.3px;
+	object-fit: contain;
+	opacity: 0.6;
 }
 
+.unsplashrarnGq1sbaIcon1 {
+	position: absolute;
+	top: 789.33px;
+	left: 0px;
+	width: 1917px;
+	height: 789.3px;
+	object-fit: contain;
+	opacity: 0.6;
+}
+
+.unsplashrarnGq1sbaIcon2 {
+	position: absolute;
+	top: 1578.67px;
+	left: 0px;
+	width: 1917px;
+	height: 789.3px;
+	object-fit: contain;
+	opacity: 0.6;
+}
+
+.unsplashDank9gjvdyIcon {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 1917px;
+	height: 789.3px;
+	object-fit: contain;
+	opacity: 0.6;
+}
+
+.unsplashDank9gjvdyIcon1 {
+	position: absolute;
+	top: 789.33px;
+	left: 0px;
+	width: 1917px;
+	height: 789.3px;
+	object-fit: contain;
+	opacity: 0.6;
+}
+
+.unsplashDank9gjvdyIcon2 {
+	position: absolute;
+	top: 1578.67px;
+	left: 0px;
+	width: 1917px;
+	height: 789.3px;
+	object-fit: contain;
+	opacity: 0.6;
+}
+
+.font {
+	position: absolute;
+	top: 0px;
+	left: 2px;
+	width: auto;
+	height: auto;
+}
+
+.profileIcon {
+	position: absolute;
+	top: 22px;
+	right: 53px;
+	width: 61px;
+	height: 61px;
+	cursor: pointer;
+}
+
+.iconMagnifyingGlass {
+	width: 29px;
+	height: 30px;
+}
+
+.div {
+	position: relative;
+}
+
+.searchbar {
+	position: absolute;
+	top: 28px;
+	right: 331px;
+	border-radius: 30.23px;
+	background-color: #0f27a2;
+	width: 237px;
+	height: 53px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 11px 21px;
+	box-sizing: border-box;
+	gap: 10px;
+}
+
+.logoIcon {
+	width: 52.5px;
+	position: relative;
+	max-height: 100%;
+	overflow: hidden;
+	flex-shrink: 0;
+}
+
+.streetbook {
+	position: relative;
+	text-shadow: 0px 2.1727077960968018px 2.17px rgba(0, 0, 0, 0.25);
+}
+
+.b {
+	position: relative;
+	font-size: 13.67px;
+	letter-spacing: 0.2em;
+}
+
+.logo {
+	position: absolute;
+	top: 17px;
+	left: 40px;
+	width: 288px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-content: center;
+	gap: 0px 2.1px;
+	font-size: 52.14px;
+	color: #0f27a2;
+	font-family: 'Roboto Condensed';
+}
+
+.backetChild {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0%;
+	right: 0%;
+	bottom: 0%;
+	left: 0%;
+	border-radius: 30.23px;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+}
+
+.iconCart {
+	position: absolute;
+	width: 40.86%;
+	top: 13px;
+	right: 35.48%;
+	left: 23.66%;
+	max-width: 100%;
+	overflow: hidden;
+	height: 28.5px;
+}
+
+.backetItem {
+	position: absolute;
+	height: calc(100% - 31px);
+	width: calc(100% - 71px);
+	top: 3px;
+	right: 22px;
+	bottom: 28px;
+	left: 49px;
+	border-radius: 50%;
+	background-color: #d54a4a;
+}
+
+.div1 {
+	position: absolute;
+	top: calc(50% - 20.36px);
+	left: calc(50% + 9.57px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 7.9px;
+	height: 15.7px;
+}
+
+.backet {
+	position: absolute;
+	top: 28px;
+	right: 176px;
+	width: 93px;
+	height: 53px;
+	cursor: pointer;
+	font-size: 15.71px;
+}
+
+.navbar {
+	position: absolute;
+	width: calc(100% - 0.5px);
+	top: 0px;
+	right: 0.5px;
+	left: 0px;
+	box-shadow: 0px -17px 160.6px 4px rgba(0, 0, 0, 0.05) inset;
+	background-color: #fff;
+	height: 133px;
+	overflow: hidden;
+	color: #fff;
+	font-family: Roboto;
+}
+
+.b1 {
+	position: absolute;
+	top: 217.06px;
+	left: calc(50% - 223.25px);
+	font-size: 48.38px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 450px;
+	height: 124.1px;
+}
+
+.b2 {
+	position: absolute;
+	top: 936.14px;
+	left: calc(50% - 360.25px);
+	font-size: 48.38px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 721px;
+	height: 124px;
+}
+
+.b3 {
+	position: absolute;
+	top: 1686px;
+	left: calc(50% - 253.25px);
+	font-size: 48.38px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 507px;
+	height: 93.1px;
+}
+
+.arrowsIcon {
+	width: 41.2px;
+	height: 69.3px;
+}
+
+.productphotoIcon {
+	position: absolute;
+	height: 80.77%;
+	width: 100%;
+	top: -3.42%;
+	right: 0%;
+	bottom: 22.65%;
+	left: 0%;
+	border-radius: 13px;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	object-fit: cover;
+}
+
+.descriptionofbook {
+	position: absolute;
+	top: 83.97%;
+	left: 0px;
+}
+
+.authorofbook {
+	position: absolute;
+	top: 88.89%;
+	left: 0px;
+	font-size: 14px;
+	font-weight: 300;
+}
+
+.priceofbook {
+	position: absolute;
+	top: 77.99%;
+	left: 0px;
+	font-size: 23.66px;
+	font-weight: 800;
+	color: #d54a4a;
+}
+
+.buybox {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	border-radius: 16.5px;
+	background-color: #29497f;
+	width: 138.8px;
+	height: 33px;
+	cursor: pointer;
+}
+
+.buy {
+	position: absolute;
+	bottom: 6.03px;
+	left: 47.79px;
+	font-size: 15.93px;
+	font-weight: 300;
+	color: #fff;
+}
+
+.starbox {
+	position: absolute;
+	height: 3.42%;
+	top: 79.27%;
+	right: 38px;
+	bottom: 17.31%;
+	border-radius: 6px;
+	background-color: #ebebeb;
+	width: 92px;
+}
+
+.productCaseChild {
+	position: absolute;
+	height: 2.14%;
+	top: 79.91%;
+	right: 116.5px;
+	bottom: 17.95%;
+	max-height: 100%;
+	width: 10px;
+}
+
+.productCaseItem {
+	position: absolute;
+	height: 2.14%;
+	top: 79.91%;
+	right: 98.5px;
+	bottom: 17.95%;
+	max-height: 100%;
+	width: 10px;
+}
+
+.productCaseInner {
+	position: absolute;
+	height: 2.14%;
+	top: 79.91%;
+	right: 79.5px;
+	bottom: 17.95%;
+	max-height: 100%;
+	width: 10px;
+}
+
+.starIcon {
+	position: absolute;
+	height: 2.14%;
+	top: 79.91%;
+	right: 60.5px;
+	bottom: 17.95%;
+	max-height: 100%;
+	width: 10px;
+}
+
+.productCaseChild1 {
+	position: absolute;
+	height: 2.14%;
+	top: 79.91%;
+	right: 41.5px;
+	bottom: 17.95%;
+	max-height: 100%;
+	width: 10px;
+}
+
+.productCase {
+	width: 251px;
+	position: relative;
+	height: 468px;
+}
+
+.arrowsIcon1 {
+	width: 41.7px;
+	height: 69.3px;
+}
+
+.fullgroupcarouselcomingsoonboo {
+	position: absolute;
+	width: calc(100% - 1px);
+	top: 1797px;
+	right: 1px;
+	left: 0px;
+	background-color: rgba(255, 255, 255, 0);
+	overflow: hidden;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	padding: 45px 36px;
+	box-sizing: border-box;
+	gap: 56px;
+	text-align: left;
+	color: #000;
+	font-family: 'Roboto Condensed';
+}
+
+.fullgroupcarouselbestofthebest {
+	position: absolute;
+	top: 1084px;
+	left: calc(50% - 959.25px);
+	background-color: rgba(255, 255, 255, 0);
+	width: 1919.5px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	padding: 45px 36px;
+	box-sizing: border-box;
+	gap: 56px;
+	text-align: left;
+	color: #000;
+	font-family: 'Roboto Condensed';
+}
+
+.priceofbook11 {
+	position: absolute;
+	top: 77.99%;
+	left: 0px;
+	font-size: 23.66px;
+	font-weight: 800;
+	color: #d54a4a;
+	white-space: pre-wrap;
+}
+
+.fullgroupcarouselnewestbooks {
+	position: absolute;
+	top: 388px;
+	left: calc(50% - 959.25px);
+	background-color: rgba(255, 255, 255, 0);
+	width: 1919.5px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	padding: 45px 36px;
+	box-sizing: border-box;
+	gap: 56px;
+	text-align: left;
+	color: #000;
+	font-family: 'Roboto Condensed';
+}
+
+.body1 {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 1920.5px;
+	height: 2368px;
+}
+
+.body {
+	width: 100%;
+	position: relative;
+	background-color: #fff;
+	height: 2368px;
+	overflow: hidden;
+	flex-shrink: 0;
+	text-align: center;
+	font-size: 20px;
+	color: #0f27a2;
+	font-family: 'Roboto Serif';
+}
