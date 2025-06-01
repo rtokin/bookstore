@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+
+body {
+    margin: 0;
+    line-height: normal;
+}
+
+.profileIcon {
+    position: absolute;
+    top: 22px;
+    right: 53px;
+    width: 61px;
+    height: 61px;
+    cursor: pointer;
+    background-color: #0f27a2;
+    border-radius: 30.23px;
+    padding: 13px 13px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+}
+
+.iconMagnifyingGlass {
+    width: 29px;
+    height: 30px;
+}
+
+.div {
+    position: relative;
+}
+
+.searchbar {
+    position: absolute;
+    top: 28px;
+    right: 331px;
+    border-radius: 30.23px;
+    background-color: #0f27a2;
+    width: 237px;
+    height: 53px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 11px 21px;
+    box-sizing: border-box;
+    gap: 10px;
+}
+
+.logoIcon {
+    width: 52.5px;
+    position: relative;
+    max-height: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.streetbook {
+    position: relative;
+    text-shadow: 0px 2.1727077960968018px 2.17px rgba(0, 0, 0, 0.25);
+}
+
+.b {
+    position: relative;
+    font-size: 13.67px;
+    letter-spacing: 0.2em;
+}
+
+.logo {
+    position: absolute;
+    top: 17px;
+    left: 40px;
+    width: 288px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 0px 2.1px;
+    font-size: 52.14px;
+    color: #0f27a2;
+    font-family: 'Roboto Condensed';
+}
+
+.backetChild {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+    border-radius: 30.23px;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+}
+
+.iconCart {
+    position: absolute;
+    width: 40.86%;
+    top: 13px;
+    right: 35.48%;
+    left: 23.66%;
+    max-width: 100%;
+    overflow: hidden;
+    height: 28.5px;
+}
+
+.backetItem {
+    position: absolute;
+    height: calc(100% - 31px);
+    width: calc(100% - 71px);
+    top: 3px;
+    right: 22px;
+    bottom: 28px;
+    left: 49px;
+    border-radius: 50%;
+    background-color: #d54a4a;
+}
+
+.div1 {
+    position: absolute;
+    top: calc(50% - 20.36px);
+    left: calc(50% + 9.57px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7.9px;
+    height: 15.7px;
+}
+
+.backet {
+    position: absolute;
+    top: 28px;
+    right: 176px;
+    width: 93px;
+    height: 53px;
+    cursor: pointer;
+    font-size: 15.71px;
+}
+
+.navbar {
+    width: 100%;
+    position: relative;
+    box-shadow: 0px -17px 160.6px 4px rgba(0, 0, 0, 0.05) inset;
+    background-color: #fff;
+    height: 133px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    font-family: Roboto;
+}

@@ -1,3 +1,15 @@
+/* ================================================================
+   Body.module.css
+   (Содержит только нужные стили для раздела «Body»:
+   • фон страницы
+   • стили заголовков разделов
+   • карусельные контейнеры
+   • карточка товара
+   • навигационные стрелки
+   • адаптивность)
+=============================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
 .unsplashrarnGq1sbaIcon {
 	position: absolute;
 	top: 0px;
@@ -5,7 +17,7 @@
 	width: 1917px;
 	height: 789.3px;
 	object-fit: contain;
-	opacity: 0.6;
+	opacity: 0;
 }
 
 .unsplashrarnGq1sbaIcon1 {
@@ -15,7 +27,7 @@
 	width: 1917px;
 	height: 789.3px;
 	object-fit: contain;
-	opacity: 0.6;
+	opacity: 0;
 }
 
 .unsplashrarnGq1sbaIcon2 {
@@ -25,7 +37,7 @@
 	width: 1917px;
 	height: 789.3px;
 	object-fit: contain;
-	opacity: 0.6;
+	opacity: 0;
 }
 
 .unsplashDank9gjvdyIcon {
@@ -35,7 +47,7 @@
 	width: 1917px;
 	height: 789.3px;
 	object-fit: contain;
-	opacity: 0.6;
+	opacity: 0.1;
 }
 
 .unsplashDank9gjvdyIcon1 {
@@ -45,7 +57,7 @@
 	width: 1917px;
 	height: 789.3px;
 	object-fit: contain;
-	opacity: 0.6;
+	opacity: 0.1;
 }
 
 .unsplashDank9gjvdyIcon2 {
@@ -55,15 +67,15 @@
 	width: 1917px;
 	height: 789.3px;
 	object-fit: contain;
-	opacity: 0.6;
+	opacity: 0.1;
 }
 
 .font {
 	position: absolute;
 	top: 0px;
 	left: 2px;
-	width: auto;
-	height: auto;
+	width: 1917px;
+	height: 2368px;
 }
 
 .profileIcon {
@@ -78,10 +90,6 @@
 .iconMagnifyingGlass {
 	width: 29px;
 	height: 30px;
-}
-
-.div {
-	position: relative;
 }
 
 .searchbar {
@@ -114,11 +122,6 @@
 	text-shadow: 0px 2.1727077960968018px 2.17px rgba(0, 0, 0, 0.25);
 }
 
-.b {
-	position: relative;
-	font-size: 13.67px;
-	letter-spacing: 0.2em;
-}
 
 .logo {
 	position: absolute;
@@ -174,17 +177,6 @@
 	background-color: #d54a4a;
 }
 
-.div1 {
-	position: absolute;
-	top: calc(50% - 20.36px);
-	left: calc(50% + 9.57px);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 7.9px;
-	height: 15.7px;
-}
-
 .backet {
 	position: absolute;
 	top: 28px;
@@ -209,262 +201,433 @@
 	font-family: Roboto;
 }
 
-.b1 {
-	position: absolute;
-	top: 217.06px;
-	left: calc(50% - 223.25px);
-	font-size: 48.38px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 450px;
-	height: 124.1px;
+/* === 1. Общие стили контейнера страницы === */
+.body {
+	width: 100%;
+	background-color: #ffffff;
+	/* Белый фон, как у макета */
+	font-family: 'Roboto Condensed', sans-serif;
+	color: #0f27a1;
+	/* основной синий цвет текста */
+	text-align: center;
+	box-sizing: border-box;
 }
 
-.b2 {
-	position: absolute;
-	top: 936.14px;
-	left: calc(50% - 360.25px);
+/* Обёртка всего контента внутри Body */
+.bodyInner {
+	max-width: 1440px;
+	/* максимально соответствует ширине макета Figma */
+	margin: 0 auto;
+	/* центрируем по горизонтали */
+	padding: 60px 20px 100px;
+	/* отступ сверху/снизу, чтобы не прижалось вплотную к Header и футеру */
+}
+
+/* === 2. Стили заголовков разделов «Новинки», «Лучшие из лучших», «Скоро в продаже» === */
+.sectionTitle {
+	width: 700px;
+	position: relative;
 	font-size: 48.38px;
-	display: flex;
+	font-family: 'Roboto Serif';
+	color: #0f27a2;
+	text-align: center;
 	align-items: center;
 	justify-content: center;
-	width: 721px;
 	height: 124px;
 }
 
-.b3 {
-	position: absolute;
-	top: 1686px;
-	left: calc(50% - 253.25px);
-	font-size: 48.38px;
+/* Каждый последующий заголовок получает отступ сверху,
+   чтобы секции не сливались друг с другом */
+.sectionTitle+.carouselWrapper {
+	margin-top: 100px;
+	margin-bottom: 100px;
+	/* 60px — можно отрегулировать под макет */
+}
+
+/* === 3. Карусельный контейнер (одиночный слайд) === */
+.carouselWrapper {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 507px;
-	height: 93.1px;
 }
 
-.arrowsIcon {
-	width: 41.2px;
-	height: 69.3px;
+/* Обёртка всех карточек одного слайда */
+.slideContainer {
+	display: flex;
+	gap: 56px;
+	/* из макета расстояние между карточками */
+	justify-content: center;
+	align-items: flex-start;
+	white-space: nowrap;
+	/* чтобы карточки не переносились */
 }
 
-.productphotoIcon {
-	position: absolute;
-	height: 80.77%;
-	width: 100%;
-	top: -3.42%;
-	right: 0%;
-	bottom: 22.65%;
-	left: 0%;
-	border-radius: 13px;
-	max-width: 100%;
+/* === 4. Стили карточки товара (productCase) === */
+.productCase {
+	position: relative;
+	width: 237px;
+	/* из Figma: 237px (или близко) */
+	height: 522px;
+	/* фиксированная высота в соответствии с макетом */
+	background-color: #ffffff;
+	border-radius: 8px;
+	/* скругление из Figma */
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 	overflow: hidden;
-	max-height: 100%;
+}
+
+/* Обложка книги */
+.productPhoto {
+	width: 100%;
+	height: 70%;
+	/* 70% от общей высоты = ~365px */
 	object-fit: cover;
+	display: block;
 }
 
-.descriptionofbook {
+/* Название книги */
+.description {
 	position: absolute;
-	top: 83.97%;
-	left: 0px;
+	top: 366px;
+	/* примерно 70% высоты плюс небольшой отступ */
+	left: 16px;
+	/* отступ слева */
+	right: 16px;
+	/* чтобы текст не выходил за границы */
+	font-size: 18px;
+	font-weight: bold;
+	color: #000000;
+	line-height: 1.2;
 }
 
-.authorofbook {
+/* Автор книги */
+.author {
 	position: absolute;
-	top: 88.89%;
-	left: 0px;
+	top: 402px;
+	/* чуть ниже названия */
+	left: 16px;
+	right: 16px;
 	font-size: 14px;
 	font-weight: 300;
+	color: #555555;
+	line-height: 1.2;
 }
 
-.priceofbook {
+/* Цена книги */
+.price {
 	position: absolute;
-	top: 77.99%;
-	left: 0px;
-	font-size: 23.66px;
+	top: 426px;
+	/* чуть выше звёздочек */
+	left: 16px;
+	font-size: 16px;
 	font-weight: 800;
-	color: #d54a4a;
+	color: #d33;
+	/* красно-бордовый, как в макете */
 }
 
-.buybox {
+/* Кнопка «Купить» (фон) */
+.buyBox {
 	position: absolute;
-	bottom: 0px;
-	left: 0px;
-	border-radius: 16.5px;
-	background-color: #29497f;
-	width: 138.8px;
-	height: 33px;
+	bottom: 16px;
+	/* от низа карточки */
+	left: 50%;
+	transform: translateX(-50%);
+	width: 154px;
+	/* ширина из макета */
+	height: 32px;
+	/* высота из макета */
+	background-color: #0f27a1;
+	/* синий цвет кнопки */
+	border-radius: 16px;
 	cursor: pointer;
 }
 
-.buy {
+/* Текст «Купить» поверх кнопки */
+.buyText {
 	position: absolute;
-	bottom: 6.03px;
-	left: 47.79px;
-	font-size: 15.93px;
+	bottom: 16px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 13px;
+	color: #ffffff;
 	font-weight: 300;
-	color: #fff;
+	width: 154px;
+	height: 32px;
+	line-height: 32px;
+	pointer-events: none;
+	/* чтобы нельзя было кликом попасть в текст, только в buyBox */
+	width: 46px;
+	font-family: 'Roboto Condensed';
+	text-align: left;
+	display: inline-block;
 }
 
-.starbox {
+/* Контейнер для звёздочек (фон, серый прямоугольник) */
+.starBox {
 	position: absolute;
-	height: 3.42%;
-	top: 79.27%;
-	right: 38px;
-	bottom: 17.31%;
-	border-radius: 6px;
+	top: 450px;
+	/* чуть ниже цены */
+	left: 16px;
+	width: 100px;
+	height: 16px;
 	background-color: #ebebeb;
-	width: 92px;
+	/* светло-серый фон */
+	border-radius: 6px;
 }
 
-.productCaseChild {
+/* Каждая звёздочка поверх starBox */
+.star1,
+.star2,
+.star3,
+.star4,
+.star5 {
 	position: absolute;
-	height: 2.14%;
-	top: 79.91%;
-	right: 116.5px;
-	bottom: 17.95%;
-	max-height: 100%;
-	width: 10px;
+	top: 450px;
+	width: 16px;
+	height: 16px;
 }
 
-.productCaseItem {
+.star1 {
+	left: 16px;
+}
+
+.star2 {
+	left: 36px;
+}
+
+.star3 {
+	left: 56px;
+}
+
+.star4 {
+	left: 76px;
+}
+
+.star5 {
+	left: 96px;
+}
+
+/* === 5. Навигационные стрелки «влево/вправо» === */
+.arrowPrev,
+.arrowNext {
 	position: absolute;
-	height: 2.14%;
-	top: 79.91%;
-	right: 98.5px;
-	bottom: 17.95%;
-	max-height: 100%;
-	width: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 32px;
+	height: 32px;
+	cursor: pointer;
+	z-index: 10;
+	/* чтобы стрелки всегда были над карточками */
 }
 
-.productCaseInner {
-	position: absolute;
-	height: 2.14%;
-	top: 79.91%;
-	right: 79.5px;
-	bottom: 17.95%;
-	max-height: 100%;
-	width: 10px;
+.arrowPrev {
+	left: 16px;
+	/* слева в карусели */
 }
 
-.starIcon {
-	position: absolute;
-	height: 2.14%;
-	top: 79.91%;
-	right: 60.5px;
-	bottom: 17.95%;
-	max-height: 100%;
-	width: 10px;
+.arrowNext {
+	right: 16px;
+	/* справа в карусели */
 }
 
-.productCaseChild1 {
-	position: absolute;
-	height: 2.14%;
-	top: 79.91%;
-	right: 41.5px;
-	bottom: 17.95%;
-	max-height: 100%;
-	width: 10px;
+/* === 6. Адаптивность === */
+@media (max-width: 1024px) {
+	.slideContainer {
+		gap: 40px;
+		/* чуть уменьшаем расстояние между карточками */
+	}
+
+	.productCase {
+		width: 200px;
+		height: 460px;
+	}
+
+	.description {
+		font-size: 16px;
+		top: 330px;
+	}
+
+	.author {
+		font-size: 13px;
+		top: 360px;
+	}
+
+	.price {
+		font-size: 15px;
+		top: 380px;
+	}
+
+	.buyBox,
+	.buyText {
+		width: 140px;
+		height: 30px;
+		bottom: 14px;
+		line-height: 30px;
+	}
+
+	.star1,
+	.star2,
+	.star3,
+	.star4,
+	.star5 {
+		top: 410px;
+		width: 14px;
+		height: 14px;
+	}
+
+	.star2 {
+		left: 34px;
+	}
+
+	.star3 {
+		left: 54px;
+	}
+
+	.star4 {
+		left: 74px;
+	}
+
+	.star5 {
+		left: 94px;
+	}
 }
 
-.productCase {
-	width: 251px;
-	position: relative;
-	height: 468px;
+@media (max-width: 768px) {
+	.slideContainer {
+		gap: 24px;
+		flex-wrap: wrap;
+		/* карточки перейдут на новую строку при необходимости */
+		justify-content: center;
+	}
+
+	.productCase {
+		width: 160px;
+		height: 380px;
+		margin-bottom: 40px;
+		/* отступ между «строками» карточек */
+	}
+
+	.description {
+		font-size: 14px;
+		top: 270px;
+	}
+
+	.author {
+		font-size: 12px;
+		top: 300px;
+	}
+
+	.price {
+		font-size: 14px;
+		top: 320px;
+	}
+
+	.buyBox,
+	.buyText {
+		width: 120px;
+		height: 28px;
+		bottom: 12px;
+		line-height: 28px;
+	}
+
+	.star1,
+	.star2,
+	.star3,
+	.star4,
+	.star5 {
+		top: 340px;
+		width: 12px;
+		height: 12px;
+	}
+
+	.star2 {
+		left: 30px;
+	}
+
+	.star3 {
+		left: 48px;
+	}
+
+	.star4 {
+		left: 66px;
+	}
+
+	.star5 {
+		left: 84px;
+	}
 }
 
-.arrowsIcon1 {
-	width: 41.7px;
-	height: 69.3px;
-}
+@media (max-width: 480px) {
+	.bodyInner {
+		padding: 40px 10px 60px;
+	}
 
-.fullgroupcarouselcomingsoonboo {
-	position: absolute;
-	width: calc(100% - 1px);
-	top: 1797px;
-	right: 1px;
-	left: 0px;
-	background-color: rgba(255, 255, 255, 0);
-	overflow: hidden;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-	padding: 45px 36px;
-	box-sizing: border-box;
-	gap: 56px;
-	text-align: left;
-	color: #000;
-	font-family: 'Roboto Condensed';
-}
+	.sectionTitle {
+		font-size: 32px;
+		margin-bottom: 16px;
+	}
 
-.fullgroupcarouselbestofthebest {
-	position: absolute;
-	top: 1084px;
-	left: calc(50% - 959.25px);
-	background-color: rgba(255, 255, 255, 0);
-	width: 1919.5px;
-	overflow: hidden;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-	padding: 45px 36px;
-	box-sizing: border-box;
-	gap: 56px;
-	text-align: left;
-	color: #000;
-	font-family: 'Roboto Condensed';
-}
+	.slideContainer {
+		flex-wrap: wrap;
+		gap: 16px;
+		justify-content: center;
+	}
 
-.priceofbook11 {
-	position: absolute;
-	top: 77.99%;
-	left: 0px;
-	font-size: 23.66px;
-	font-weight: 800;
-	color: #d54a4a;
-	white-space: pre-wrap;
-}
+	.productCase {
+		width: 180px;
+		height: 420px;
+		margin-bottom: 30px;
+	}
 
-.fullgroupcarouselnewestbooks {
-	position: absolute;
-	top: 388px;
-	left: calc(50% - 959.25px);
-	background-color: rgba(255, 255, 255, 0);
-	width: 1919.5px;
-	overflow: hidden;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-	padding: 45px 36px;
-	box-sizing: border-box;
-	gap: 56px;
-	text-align: left;
-	color: #000;
-	font-family: 'Roboto Condensed';
-}
+	.description {
+		font-size: 16px;
+		top: 290px;
+	}
 
-.body1 {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	width: 1920.5px;
-	height: 2368px;
-}
+	.author {
+		font-size: 14px;
+		top: 320px;
+	}
 
-.body {
-	width: 100%;
-	position: relative;
-	background-color: #fff;
-	height: 2368px;
-	overflow: hidden;
-	flex-shrink: 0;
-	text-align: center;
-	font-size: 20px;
-	color: #0f27a2;
-	font-family: 'Roboto Serif';
+	.price {
+		font-size: 20px;
+		top: 340px;
+	}
+
+	.buyBox,
+	.buyText {
+		width: 130px;
+		height: 30px;
+		bottom: 14px;
+		line-height: 30px;
+	}
+
+	.star1,
+	.star2,
+	.star3,
+	.star4,
+	.star5 {
+		top: 360px;
+		width: 14px;
+		height: 14px;
+	}
+
+	.star2 {
+		left: 32px;
+	}
+
+	.star3 {
+		left: 54px;
+	}
+
+	.star4 {
+		left: 76px;
+	}
+
+	.star5 {
+		left: 98px;
+	}
 }
