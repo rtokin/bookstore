@@ -26,7 +26,7 @@ const Body: FunctionComponent = () => {
     { id: 203, image: '/images/01965c27-4974-716a-a4b5-a0a8e66a2f8d.webp', title: 'Комната правды', author: 'Юки Синъитиро', price: '563 ₽' },
     { id: 204, image: '/images/01965c23-cfc5-709a-999a-bc444cc5e03b.webp', title: 'Мармеладные убийства', author: 'Чо Йеын', price: '630 ₽' },
     { id: 205, image: '/images/0195db84-fcb1-7d1e-8bbb-6fa6e631e125.webp', title: 'Проверка на бессмертие', author: 'Мэй', price: '1000 ₽' },
-    { id: 206, image: '/images/0195fb53-6604-7454-a80a-102c5bc33824.webp', title: 'Странички шелестят в полночь', author: 'Белла Лавгуд', price: '880 ₽' },
+    { id: 206, image: '/images/0195fb53-6604-7454-a80a-102c5bc33824.webp', title: 'Странички шелестят', author: 'Белла Лавгуд', price: '880 ₽' },
     { id: 207, image: '/images/0195fb57-c23f-7955-ab56-6ebb7e4698fa.webp', title: 'Все мои птицы', author: 'К.А.Терина', price: '1020 ₽' },
     { id: 208, image: '/images/0195d843-5795-7123-967d-941e4e87c928.webp', title: 'Падение дома Ашеров', author: 'Жан Дюфо', price: '1150 ₽' },
     { id: 209, image: '/images/019540e7-f91c-7ed4-8466-5dea3bd99e76.webp', title: 'Птицы леса. Артбук', author: 'Geo Saiko', price: '1870 ₽' },

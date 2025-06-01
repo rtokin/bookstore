@@ -2,11 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@700&display=swap');
 
-body {
-	margin: 0;
-	line-height: normal;
-}
-
 .unsplashrarnGq1sbaIcon {
 	position: absolute;
 	top: 0px;
@@ -203,9 +198,14 @@ body {
 	width: 100%;
 	background-color: #ffffff;
 	font-family: 'Roboto Condensed', sans-serif;
-	color: #0f27a1;
 	text-align: center;
 	box-sizing: border-box;
+	position: relative;
+	height: 2368px;
+	overflow: hidden;
+	flex-shrink: 0;
+	font-size: 20px;
+	color: #0f27a2;
 }
 
 /* Обёртка всего контента внутри Body */
@@ -284,6 +284,7 @@ body {
 	font-weight: bold;
 	color: #000000;
 	line-height: 1.2;
+	margin-top: 5px;
 }
 
 /* Автор книги */
@@ -305,7 +306,7 @@ body {
 	top: 426px;
 	/* чуть выше звёздочек */
 	left: 16px;
-	font-size: 16px;
+	font-size: 20px;
 	font-weight: 800;
 	color: #d33;
 }
