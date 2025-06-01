@@ -1,0 +1,212 @@
+/* src/styles/BacketPage.module.css */
+
+/* Общий контейнер страницы */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+/* Сообщение «Корзина пуста» */
+.emptyMessage {
+  margin: 200px auto;
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Список товаров в корзине (улит) */
+.itemsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* расстояние между строками */
+}
+
+/* Одна строка товара */
+.itemRow {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  gap: 16px;
+  position: relative;
+}
+
+/* Обложка книги */
+.coverWrapper {
+  flex-shrink: 0;
+  width: 113px;
+  height: 162px;
+  border-radius: 13px;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.coverImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Текстовый блок (название + автор) */
+.textWrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 500;
+  color: #000;
+}
+
+.author {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 300;
+  color: #555;
+}
+
+/* Цена строки (умноженная на количество) */
+.price {
+  font-size: 36px;
+  font-weight: 800;
+  color: #d54a4a;
+  flex-shrink: 0;
+  width: 120px;
+  text-align: right;
+}
+
+/* Контейнер для управления количеством */
+.qtyControl {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  width: 120px;
+  justify-content: center;
+}
+
+/* Кнопка «+» и «–» */
+.qtyButton {
+  width: 32px;
+  height: 32px;
+  background-color: #e6e6e6;
+  border: 0.8px solid rgba(183, 183, 183, 0.42);
+  border-radius: 50%;
+  font-size: 24px;
+  line-height: 24px;
+  padding: 0;
+  cursor: pointer;
+  color: #1c1c1c;
+  transition: background-color 0.2s;
+}
+
+.qtyButton:hover:not(:disabled) {
+  background-color: #d4d4d4;
+}
+
+.qtyButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Текущее количество */
+.qtyValue {
+  font-size: 24px;
+  font-weight: 300;
+  width: 32px;
+  text-align: center;
+  color: #1c1c1c;
+}
+
+/* Секция кнопки «Оформить заказ» */
+.orderSection {
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Кнопка «Оформить заказ» */
+.placeOrderButton {
+  background-color: #29497f;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.placeOrderButton:hover {
+  background-color: #1f3769;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+  .itemRow {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .coverWrapper {
+    width: 120px;
+    height: 172px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .author {
+    font-size: 18px;
+  }
+
+  .price {
+    font-size: 24px;
+  }
+
+  .qtyControl {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 16px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .author {
+    font-size: 16px;
+  }
+
+  .price {
+    font-size: 20px;
+  }
+
+  .placeOrderButton {
+    width: 100%;
+    font-size: 18px;
+    padding: 10px 0;
+  }
+}

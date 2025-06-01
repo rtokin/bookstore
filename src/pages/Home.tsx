@@ -1,15 +1,8 @@
-import Header from '../components/Header'
-import Body from '../components/Body'
-import Footer from '../components/Footer'
+import React from "react"
+import Body from "../components/Body"
 
-export default function Home() {
-  return (
-    <div className="flex flex-col min-h-screen">
-      <Header />
-      <main className="flex-grow">
-        <Body />
-      </main>
-      <Footer />
-    </div>
-  )
+const Home: React.FC = () => {
+  return <Body />  // Тут только содержимое «тела» Главной
 }
+
+export default Home

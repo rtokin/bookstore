@@ -1,61 +1,117 @@
-import * as React from 'react';
-import { 
+// src/routes.tsx
+import React from "react"
+import {
+  RootRoute,
+  Route,
+  Outlet,
   createRouter,
   RouterProvider,
-  createRoute,
-  createRootRoute 
-} from '@tanstack/react-router';
-import Home from './pages/Home';
-import Login from './pages/Login';
-import Register from './pages/Register';
-import Admin from './pages/Admin';
+} from "@tanstack/react-router"
+import { TanStackRouterDevtools } from "@tanstack/react-router-devtools"
 
-// 1. Создаем корневой маршрут
-const rootRoute = createRootRoute();
+// 1) Импорт всех наших страниц и компонентов
+import Header from "./components/Header"
+import Navbar from "./components/Navbar"
+import Footer from "./components/Footer"
+import Body from "./components/Body"
+import Login from "./components/Login"
+import Registration from "./components/Registration"
+import BacketPage from "./pages/BacketPage"
+import NotFound from "./pages/NotFound"
 
-// 2. Создаем дочерние маршруты
-const indexRoute = createRoute({
+export const rootRoute = new RootRoute({
+  component: () => {
+    // Здесь модалка рендерится вне маршрутов (см. main.tsx),
+    // поэтому на уровне роутинга только <Outlet/>
+    return <Outlet />
+  },
+})
+
+export const homeRoute = new Route({
   getParentRoute: () => rootRoute,
-  path: '/',
-  component: Home,
-});
+  path: "/", // URL = "/"
+  component: () => (
+    <>
+      <Header />
+      <Navbar />
+      <Body />
+      <Footer />
+    </>
+  ),
+})
 
-const loginRoute = createRoute({
+export const loginRoute = new Route({
   getParentRoute: () => rootRoute,
-  path: '/login',
-  component: Login,
-});
+  path: "/login",
+  component: () => (
+    <>
+      <Navbar />
+      <Login
+        // Внутренние функции onClose и switchToRegister не передаём,
+        // потому что на странице /login они не нужны — это полноценная страница.
+        // В модалке эти props уже передаются в ModalRenderer.
+        onClose={() => {}}
+        switchToRegister={() => {}}
+      />
+      <Footer />
+    </>
+  ),
+})
 
-const registerRoute = createRoute({
+export const registerRoute = new Route({
   getParentRoute: () => rootRoute,
-  path: '/register',
-  component: Register,
-});
+  path: "/register",
+  component: () => (
+    <>
+      <Navbar />
+      <Registration
+        onClose={() => {}}
+        switchToLogin={() => {}}
+      />
+      <Footer />
+    </>
+  ),
+})
 
-const adminRoute = createRoute({
+export const cartRoute = new Route({
   getParentRoute: () => rootRoute,
-  path: '/admin',
-  component: Admin,
-});
+  path: "/cart",
+  component: () => (
+    <>
+      <Navbar />
+      <BacketPage />
+      <Footer />
+    </>
+  ),
+})
 
-// 3. Создаем и экспортируем router
+export const notFoundRoute = new Route({
+  getParentRoute: () => rootRoute,
+  path: "*",
+  component: () => (
+    <>
+      <Navbar />
+      <NotFound />
+      <Footer />
+    </>
+  ),
+})
+
 export const router = createRouter({
   routeTree: rootRoute.addChildren([
-    indexRoute,
+    homeRoute,
     loginRoute,
     registerRoute,
-    adminRoute
+    cartRoute,
+    notFoundRoute,
   ]),
-});
+  defaultPreload: "intent",
+  defaultPreloadDelay: 200,
+})
 
-// 4. Подключаем типы
-declare module '@tanstack/react-router' {
-  interface Register {
-    router: typeof router;
-  }
-}
-
-// 5. Экспортируем провайдер
-export default function AppRouter() {
-  return <RouterProvider router={router} />;
-}
+export const AppRouter: React.FC = () => (
+  <>
+    <RouterProvider router={router} />
+    <TanStackRouterDevtools router={router} position="bottom-left" />
+  </>
+)

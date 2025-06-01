@@ -1,51 +1,53 @@
-// src/components/Login.tsx
-
-import React, { FunctionComponent, useCallback, useState } from "react";
-import styles from "../styles/Login.module.css";
-import { loginWithEmail } from "../services/firebase";
+import React, { FunctionComponent, useCallback, useState } from "react"
+import styles from "../styles/Login.module.css"
+import { loginWithEmail } from "../services/firebase"
 
 interface LoginProps {
-  onClose: () => void;        // закрыть модалку
-  switchToRegister: () => void; // переключиться на модалку регистрации
+  onClose: () => void           // закрыть модалку
+  switchToRegister: () => void  // переключиться на модалку регистрации
 }
 
-const Login: FunctionComponent<LoginProps> = ({
-  onClose,
-  switchToRegister,
-}) => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
+const Login: FunctionComponent<LoginProps> = ({ onClose, switchToRegister }) => {
+  // Состояние полей
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [error, setError] = useState<string | null>(null)
+  const [loading, setLoading] = useState(false)
 
-  // Обработчик входа:
+  // Обработчик сабмита «вход»
   const handleLogin = useCallback(
     async (e: React.FormEvent) => {
-      e.preventDefault();
-      setError(null);
+      e.preventDefault()
+      setError(null)
 
       try {
-        setLoading(true);
-        await loginWithEmail(email, password);
-        onClose();
+        setLoading(true)
+        await loginWithEmail(email, password)
+        onClose()
       } catch (err: any) {
-        console.error(err);
-        setError(err.message || "Не удалось войти.");
+        console.error(err)
+        setError(err.message || "Не удалось войти.")
       } finally {
-        setLoading(false);
+        setLoading(false)
       }
     },
     [email, password, onClose]
-  );
+  )
 
   return (
     <div className={styles.modalOverlay}>
       <div className={styles.modalBox}>
+        {/* Крестик «×» */}
         <button className={styles.closeButton} onClick={onClose}>
           &times;
         </button>
+
+        {/* Заголовок «Вход» */}
         <h2 className={styles.title}>Вход</h2>
+
+        {/* Вывод ошибки, если есть */}
         {error && <div className={styles.error}>{error}</div>}
+
         <form onSubmit={handleLogin} className={styles.form}>
           {/* Почта */}
           <div className={styles.field}>
@@ -99,7 +101,7 @@ const Login: FunctionComponent<LoginProps> = ({
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Login;
+export default Login

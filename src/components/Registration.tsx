@@ -1,60 +1,64 @@
-// src/components/Registration.tsx
-
-import React, { FunctionComponent, useCallback, useState } from "react";
-import styles from "../styles/Registration.module.css";
-import { registerWithEmail } from "../services/firebase";
+import React, { FunctionComponent, useCallback, useState } from "react"
+import styles from "../styles/Registration.module.css"
+import { registerWithEmail } from "../services/firebase"
 
 interface RegistrationProps {
-  onClose: () => void;         // вызывается, когда закрываем модалку (по крестику или по успешному регистру)
-  switchToLogin: () => void;   // вызывается, когда нажмут «Уже есть аккаунт? Войти»
+  onClose: () => void        // вызывается при закрытии модалки
+  switchToLogin: () => void  // вызывается, если нажали «Уже есть аккаунт? Войти»
 }
 
 const Registration: FunctionComponent<RegistrationProps> = ({
   onClose,
   switchToLogin,
 }) => {
-  // Состояние полей
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [error, setError] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
+  // 1) Локальное состояние формы
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [confirmPassword, setConfirmPassword] = useState("")
+  const [error, setError] = useState<string | null>(null)
+  const [loading, setLoading] = useState(false)
 
-  // 1) Обработчик регистрации:
+  // 2) Обработчик сабмита регистрации
   const handleRegister = useCallback(
     async (e: React.FormEvent) => {
-      e.preventDefault();
-      setError(null);
+      e.preventDefault()
+      setError(null)
 
       if (password !== confirmPassword) {
-        setError("Пароли не совпадают.");
-        return;
+        setError("Пароли не совпадают.")
+        return
       }
 
       try {
-        setLoading(true);
+        setLoading(true)
         // Вызываем Firebase-функцию
-        await registerWithEmail(email, password);
-        // После успешной регистрации можно сразу закрыть модалку
-        onClose();
+        await registerWithEmail(email, password)
+        // После успешной регистрации закрываем модалку
+        onClose()
       } catch (err: any) {
-        console.error(err);
-        setError(err.message || "Не удалось зарегистрироваться.");
+        console.error(err)
+        setError(err.message || "Не удалось зарегистрироваться.")
       } finally {
-        setLoading(false);
+        setLoading(false)
       }
     },
     [email, password, confirmPassword, onClose]
-  );
+  )
 
   return (
     <div className={styles.modalOverlay}>
       <div className={styles.modalBox}>
+        {/* Крестик «×» */}
         <button className={styles.closeButton} onClick={onClose}>
           &times;
         </button>
+
+        {/* Заголовок */}
         <h2 className={styles.title}>Регистрация</h2>
+
+        {/* Вывод ошибки, если есть */}
         {error && <div className={styles.error}>{error}</div>}
+
         <form onSubmit={handleRegister} className={styles.form}>
           {/* Почта */}
           <div className={styles.field}>
@@ -126,7 +130,7 @@ const Registration: FunctionComponent<RegistrationProps> = ({
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Registration;
+export default Registration

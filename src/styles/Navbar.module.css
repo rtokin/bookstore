@@ -69,20 +69,21 @@ body {
 }
 
 .logo {
-    position: absolute;
-    top: 17px;
-    left: 40px;
-    width: 288px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-content: center;
-    gap: 0px 2.1px;
-    font-size: 52.14px;
-    color: #0f27a2;
-    font-family: 'Roboto Condensed';
+  position: absolute;
+  top: 17px;
+  left: 40px;
+  width: 288px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 0px 2.1px;
+  font-size: 52.14px;
+  color: #0f27a2;
+  font-family: 'Roboto Condensed';
+  cursor: pointer; /* <- делаем блок кликабельным визуально */
 }
 
 .backetChild {

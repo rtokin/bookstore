@@ -1,9 +1,7 @@
-import { defineConfig } from 'vite'
-import viteReact from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
-import { resolve } from 'node:path'
-
-// https://vitejs.dev/config/
+// vite.config.js
+import { defineConfig } from 'vite';
+import viteReact from '@vitejs/plugin-react';
+import { resolve } from 'node:path';
 
 export default defineConfig({
   css: {
@@ -13,7 +11,9 @@ export default defineConfig({
       },
     },
   },
-  plugins: [viteReact(), tailwindcss()],
+  plugins: [
+    viteReact(),
+  ],
   test: {
     globals: true,
     environment: 'jsdom',
@@ -25,4 +25,4 @@ export default defineConfig({
     },
   },
   assetsInclude: ['**/*.png'],
-})
+});
