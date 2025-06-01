@@ -1,0 +1,141 @@
+/* src/styles/OrderModal.module.css */
+
+/* Полупрозрачный фон (overlay) */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Само модальное окно */
+.modalBox {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 24px;
+  width: 90%;
+  max-width: 450px;
+  padding: 32px 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+/* Кнопка закрытия «×» */
+.closeButton {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Заголовок */
+.title {
+  margin: 0;
+  margin-bottom: 16px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: #0f27a2;
+}
+
+/* Блок с ошибкой */
+.error {
+  background-color: #fdecea;
+  color: #d32f2f;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+/* Форма */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Один контрол (label + input/select) */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Label */
+.label {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Input / Select */
+.input {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input:hover {
+  border-color: #0f27a2;
+}
+
+.input:focus {
+  border-color: #0f27a2;
+  box-shadow: 0 0 0 2px rgba(15, 39, 162, 0.2);
+}
+
+/* Кнопка отправки */
+.submitButton {
+  margin-top: 16px;
+  background-color: #0f27a2;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submitButton:hover {
+  background-color: #0c1d7a;
+}
+
+.submitButton:disabled {
+  background-color: #888;
+  cursor: not-allowed;
+}
+
+/* Адаптивность */
+@media (max-width: 480px) {
+  .modalBox {
+    width: 95%;
+    padding: 24px 16px;
+  }
+  .title {
+    font-size: 20px;
+  }
+  .input {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+  .submitButton {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

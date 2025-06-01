@@ -2,21 +2,21 @@
 import React from "react";
 import { useCart, CartItem as CartItemType } from "../contexts/CartContext";
 import { useNavigate } from "@tanstack/react-router";
+import { useModal } from "../contexts/ModalContext";
 import styles from "../styles/BacketPage.module.css";
 
 const BacketPage: React.FC = () => {
   const navigate = useNavigate({ from: "/cart" });
-  const { items, changeQuantity, totalSum, clearCart } = useCart();
+  const { items, changeQuantity, totalSum } = useCart();
+  const { openOrder } = useModal();
 
-  // Кнопка «Оформить заказ»
+  // при нажатии – открываем модалку оформления
   const onPlaceOrder = () => {
     if (items.length === 0) {
       alert("Корзина пуста!");
       return;
     }
-    alert(`Заказ на сумму ${totalSum} ₽ оформлен!`);
-    clearCart();
-    navigate({ to: "/" });
+    openOrder();
   };
 
   return (
@@ -39,7 +39,7 @@ const BacketPage: React.FC = () => {
                   />
                 </div>
 
-                {/* Текстовая часть: название + автор */}
+                {/* Текст: название + автор */}
                 <div className={styles.textWrapper}>
                   <b className={styles.title}>{item.title}</b>
                   <div className={styles.author}>{item.author}</div>
@@ -50,7 +50,7 @@ const BacketPage: React.FC = () => {
                   {item.price * item.quantity} ₽
                 </div>
 
-                {/* Количество и кнопки */}
+                {/* Контрол количества */}
                 <div className={styles.qtyControl}>
                   <button
                     className={styles.qtyButton}
@@ -71,7 +71,7 @@ const BacketPage: React.FC = () => {
             ))}
           </ul>
 
-          {/* Подвал списка — кнопка «Оформить заказ» */}
+          {/* Кнопка «Оформить заказ» */}
           <div className={styles.orderSection}>
             <button
               className={styles.placeOrderButton}
