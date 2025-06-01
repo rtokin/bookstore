@@ -24,7 +24,7 @@ const Body: FunctionComponent = () => {
     { id: 201, image: '/images/0195bc88-8a98-7275-afe7-61ec15ac005d.webp', title: 'Скиталец. Лживые предания', author: 'Анастасия Князь', price: '939 ₽' },
     { id: 202, image: '/images/01963a94-8322-78fd-8697-4fa943aa2c42.webp', title: 'Спешащие во тьму', author: 'Адам Нэвилл', price: '845 ₽' },
     { id: 203, image: '/images/01965c27-4974-716a-a4b5-a0a8e66a2f8d.webp', title: 'Комната правды', author: 'Юки Синъитиро', price: '563 ₽' },
-    { id: 204, image: '/images/01965c23-cfc5-709a-999a-bc444cc5e03b.webp', title: 'Мармеладные убийства в парке Сеула', author: 'Чо Йеын', price: '630 ₽' },
+    { id: 204, image: '/images/01965c23-cfc5-709a-999a-bc444cc5e03b.webp', title: 'Мармеладные убийства', author: 'Чо Йеын', price: '630 ₽' },
     { id: 205, image: '/images/0195db84-fcb1-7d1e-8bbb-6fa6e631e125.webp', title: 'Проверка на бессмертие', author: 'Мэй', price: '1000 ₽' },
     { id: 206, image: '/images/0195fb53-6604-7454-a80a-102c5bc33824.webp', title: 'Странички шелестят в полночь', author: 'Белла Лавгуд', price: '880 ₽' },
     { id: 207, image: '/images/0195fb57-c23f-7955-ab56-6ebb7e4698fa.webp', title: 'Все мои птицы', author: 'К.А.Терина', price: '1020 ₽' },
