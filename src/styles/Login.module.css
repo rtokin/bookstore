@@ -1,182 +1,153 @@
 /* src/styles/Login.module.css */
 
-/* ===================== 1) Фон модального окна (бэкдроп) ===================== */
-.loginOverlay {
+/* Тот же overlay, что и для Registration */
+.modalOverlay {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw; 
-  height: 100vh; 
-  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
 }
 
-/* ================ 2) Контейнер формы (центрирование) ================ */
-.loginContainer {
+/* Центральный бокс */
+.modalBox {
   position: relative;
+  background-color: #ffffff;
+  border-radius: 24px;
   width: 90%;
-  max-width: 550px;      /* Увеличенная максимальная ширина */
-  margin: 0 auto;
+  max-width: 400px;
+  padding: 32px 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  font-family: "Roboto Condensed", sans-serif;
 }
 
-/* ======================= 3) СТИЛИ ДЛЯ <form> ======================= */
+/* Крестик «×» */
+.closeButton {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Заголовок «Вход» */
+.title {
+  margin: 0;
+  margin-bottom: 16px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: #0f27a2;
+}
+
+/* Ошибка */
+.error {
+  background-color: #fdecea;
+  color: #d32f2f;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
 .form {
-  position: relative;
-  padding: 36px;             /* Чуть больше отступ, чтобы объёмный вид */
-  background-color: #054d9f; /* Синий фон аналогично Registration */
-  border-radius: 32px;       /* Сильно округлённый бокс */
-  box-sizing: border-box;
-  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  gap: 16px;
 }
 
-/* Запрет выделения текста в форме */
-.form, .form * {
-  user-select: none;
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
-/* ======================= 4) Заголовок «Вход в аккаунт» ======================= */
-.title {
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 30px;         /* Чуть крупнее */
-  font-weight: 800;        /* Пожирнее */
-  color: #ffffff;
-  text-align: center;
-  margin-bottom: 28px;     /* Отступ снизу */
-}
-
-/* ==================== 5) Метка (label) перед полями ==================== */
 .label {
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  color: #ffffff;
-  margin-bottom: 8px;
-  margin-left: 4px;
+  font-size: 14px;
+  color: #555;
 }
 
-/* ======================= 6) Поле ввода (input) ======================= */
-.inputField {
-  width: 100%;
-  padding: 12px 14px;        /* Чуть больше внутренних отступов */
-  margin-bottom: 22px;
-  border: none;
+.input {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
   border-radius: 8px;
-  font-family: 'Roboto Condensed', sans-serif;
   font-size: 16px;
-  color: #333333;            /* Цвет вводимого текста */
-  background-color: #f0f0f0; /* Default фон – очень светло-серый */
-  box-sizing: border-box;
   outline: none;
-  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-/* — Hover (наведение мыши) — */
-.inputField:hover {
-  background-color: #e0e0e0;
+.input:hover {
+  border-color: #0f27a2;
 }
 
-/* — Focus (фокус на поле) — */
-.inputField:focus {
-  background-color: #ffffff;
-  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.8);
+.input:focus {
+  border-color: #0f27a2;
+  box-shadow: 0 0 0 2px rgba(15, 39, 162, 0.2);
 }
 
-/* — Fill (когда поле уже заполнено) — */
-.inputField:not(:placeholder-shown) {
-  background-color: #dcdcdc;
-}
-
-/* — Fill-Hover (когда поле заполнено + hover) — */
-.inputField:not(:placeholder-shown):hover {
-  background-color: #cccccc;
-}
-
-/* =============== 7) Кнопка «Войти» =============== */
 .submitButton {
-  position: relative;
-  width: 100%;
-  background-color: #e5e5e5;
+  margin-top: 8px;
+  background-color: #0f27a2;
+  color: #fff;
   border: none;
   border-radius: 8px;
-  padding: 14px 0;
-  margin-top: 8px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
-  box-sizing: border-box;
-  transition: background-color 0.2s ease, transform 0.1s ease;
+  transition: background-color 0.2s;
 }
 
 .submitButton:hover {
-  background-color: #d4d4d4;
+  background-color: #0c1d7a;
 }
 
-.submitButton:active {
-  transform: translateY(1px);
+.submitButton:disabled {
+  background-color: #888;
+  cursor: not-allowed;
 }
 
-/* Текст внутри кнопки */
-.submitButtonText {
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  color: #054d9f;
-  user-select: none;
-}
-
-/* ======== 8) Ссылка «Нет аккаунта? Зарегистрироваться» ======== */
-.switchToRegister {
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 14px;
-  color: #ffffff;
+.switchLine {
+  margin-top: 16px;
   text-align: center;
-  margin-top: 20px;
-  cursor: pointer;
-  transition: text-decoration 0.15s ease;
+  font-size: 14px;
+  color: #333;
 }
 
-.switchToRegister:hover {
+.linkButton {
+  background: none;
+  border: none;
+  color: #0f27a2;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 4px;
   text-decoration: underline;
 }
 
-/* ========================== 9) АДАПТИВНОСТЬ ========================== */
-
-/* Для экранов ≤ 600px (телефоны) */
-@media (max-width: 600px) {
-  .form {
-    padding: 24px;
+@media (max-width: 480px) {
+  .modalBox {
+    width: 95%;
+    padding: 24px 16px;
   }
   .title {
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 20px;
   }
-  .label {
+  .input {
     font-size: 14px;
-  }
-  .inputField {
-    font-size: 14px;
-    padding: 10px 12px;
-    margin-bottom: 18px;
+    padding: 8px 10px;
   }
   .submitButton {
-    padding: 12px 0;
-  }
-  .submitButtonText {
     font-size: 14px;
-  }
-  .switchToRegister {
-    font-size: 12px;
-    margin-top: 16px;
-  }
-}
-
-/* Для экранов ≥ 1024px (десктопы) */
-@media (min-width: 1024px) {
-  .loginContainer {
-    max-width: 450px; /* чтобы форма не выглядела слишком широкой на десктопе */
+    padding: 10px;
   }
 }

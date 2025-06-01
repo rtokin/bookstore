@@ -1,90 +1,86 @@
 // src/components/Navbar.tsx
 
-import React, { FunctionComponent, useCallback, useState } from 'react'
-import styles from '../styles/Navbar.module.css'
-import Registration from './Registration'
-import Login from './Login'
+import React, { FunctionComponent, useCallback, useState } from "react";
+import styles from "../styles/Navbar.module.css";
+import Registration from "./Registration";
+import Login from "./Login";
 
 const Navbar: FunctionComponent = () => {
-  // 1) modalType: какое модальное окно сейчас открыто
-  const [modalType, setModalType] = useState<'none' | 'register' | 'login'>('none')
+  const [isRegOpen, setIsRegOpen] = useState(false);
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
 
-  const openRegistration = useCallback(() => {
-    setModalType('register')
-  }, [])
-
-  const openLogin = useCallback(() => {
-    setModalType('login')
-  }, [])
-
-  const closeAllModals = useCallback(() => {
-    setModalType('none')
-  }, [])
-
-  // Нажатие на иконку «Профиль» открывает Registration
+  // Обработчик клика по иконке профиля
   const onProfileClick = useCallback(() => {
-    openRegistration()
-  }, [openRegistration])
+    // Открываем окно регистрации:
+    setIsRegOpen(true);
+    setIsLoginOpen(false);
+  }, []);
+
+  // Закрыть модалку регистрации
+  const closeRegistration = useCallback(() => {
+    setIsRegOpen(false);
+  }, []);
+
+  // Закрыть модалку логина
+  const closeLogin = useCallback(() => {
+    setIsLoginOpen(false);
+  }, []);
+
+  // Переключиться с регистрации на окно входа
+  const switchToLogin = useCallback(() => {
+    setIsRegOpen(false);
+    setIsLoginOpen(true);
+  }, []);
+
+  // Переключиться с логина на регистрацию
+  const switchToRegister = useCallback(() => {
+    setIsLoginOpen(false);
+    setIsRegOpen(true);
+  }, []);
 
   return (
-    <>
-      {/* ──────────────────────────────────────────────────────────────────── */}
-      {/*                    Старая часть Navbar (без изменений)                 */}
-      {/* ──────────────────────────────────────────────────────────────────── */}
-      <div className={styles.navbar}>
-        {/* Иконка «Профиль» */}
+    <div className={styles.navbar}>
+      <img
+        className={styles.profileIcon}
+        alt="profile"
+        src="/images/profile.svg"
+        onClick={onProfileClick}
+      />
+      <div className={styles.searchbar}>
         <img
-          className={styles.profileIcon}
-          alt=""
-          src="/images/profile.svg"
-          onClick={onProfileClick}
+          className={styles.iconMagnifyingGlass}
+          alt="search"
+          src="/images/icon_magnifying_glass.svg"
         />
-
-        {/* Поисковая строка */}
-        <div className={styles.searchbar}>
-          <img
-            className={styles.iconMagnifyingGlass}
-            alt=""
-            src="/images/icon_magnifying_glass.svg"
-          />
-          <div className={styles.div}>Поиск</div>
-        </div>
-
-        {/* Логотип */}
-        <div className={styles.logo}>
-          <img className={styles.logoIcon} alt="" src="/images/Logo.svg" />
-          <b className={styles.streetbook}>StreetBook</b>
-          <b className={styles.b}>Магазин современной литературы</b>
-        </div>
-
-        {/* Корзина (без клика открытия модалки) */}
-        <div className={styles.backet}>
-          <img className={styles.backetChild} alt="" src="/images/rectangle4.svg" />
-          <img className={styles.iconCart} alt="" src="/images/icon_backet.svg" />
-          <div className={styles.backetItem} />
-          <div className={styles.div1}>0</div>
-        </div>
+        <div className={styles.div}>Поиск</div>
+      </div>
+      <div className={styles.logo}>
+        <img className={styles.logoIcon} alt="logo" src="/images/Logo.svg" />
+        <b className={styles.streetbook}>StreetBook</b>
+        <b className={styles.b}>Магазин современной литературы</b>
+      </div>
+      <div className={styles.backet} onClick={() => {}}>
+        {/* ваша корзина (здесь можно потом выводить кол-во товаров) */}
+        <img
+          className={styles.backetChild}
+          alt="basket"
+          src="/images/rectangle4.svg"
+        />
+        <img className={styles.iconCart} alt="cart" src="/images/icon_backet.svg" />
+        <div className={styles.backetItem} />
+        <div className={styles.div1}>0</div>
       </div>
 
-      {/* ──────────────────────────────────────────────────────────────────── */}
-      {/*         Если modalType === 'register', показываем Registration         */}
-      {/* ──────────────────────────────────────────────────────────────────── */}
-      {modalType === 'register' && (
-        <Registration
-          onLoginLinkClick={() => {
-            // Переключиться на окно логина
-            setModalType('login')
-          }}
-          onClose={closeAllModals}
-        />
+      {/* ─────────── ВСТАВКА МОДАЛОК ──────────── */}
+
+      {isRegOpen && (
+        <Registration onClose={closeRegistration} switchToLogin={switchToLogin} />
       )}
+      {isLoginOpen && (
+        <Login onClose={closeLogin} switchToRegister={switchToRegister} />
+      )}
+    </div>
+  );
+};
 
-      {/* ──────────────────────────────────────────────────────────────────── */}
-      {/*           Если modalType === 'login', показываем Login               */}
-      {/* ──────────────────────────────────────────────────────────────────── */}
-      {modalType === 'login' && <Login onClose={closeAllModals} />}
-    </>
-  )
-}
-
-export default Navbar
+export default Navbar;
