@@ -1,14 +1,11 @@
-/* ================================================================
-   Body.module.css
-   (Содержит только нужные стили для раздела «Body»:
-   • фон страницы
-   • стили заголовков разделов
-   • карусельные контейнеры
-   • карточка товара
-   • навигационные стрелки
-   • адаптивность)
-=============================================================== */
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@700&display=swap');
+
+body {
+	margin: 0;
+	line-height: normal;
+}
 
 .unsplashrarnGq1sbaIcon {
 	position: absolute;
@@ -17,7 +14,7 @@
 	width: 1917px;
 	height: 789.3px;
 	object-fit: contain;
-	opacity: 0;
+	opacity: 0.1;
 }
 
 .unsplashrarnGq1sbaIcon1 {
@@ -27,7 +24,7 @@
 	width: 1917px;
 	height: 789.3px;
 	object-fit: contain;
-	opacity: 0;
+	opacity: 0.1;
 }
 
 .unsplashrarnGq1sbaIcon2 {
@@ -37,7 +34,7 @@
 	width: 1917px;
 	height: 789.3px;
 	object-fit: contain;
-	opacity: 0;
+	opacity: 0.1;
 }
 
 .unsplashDank9gjvdyIcon {
@@ -205,10 +202,8 @@
 .body {
 	width: 100%;
 	background-color: #ffffff;
-	/* Белый фон, как у макета */
 	font-family: 'Roboto Condensed', sans-serif;
 	color: #0f27a1;
-	/* основной синий цвет текста */
 	text-align: center;
 	box-sizing: border-box;
 }
@@ -216,11 +211,8 @@
 /* Обёртка всего контента внутри Body */
 .bodyInner {
 	max-width: 1440px;
-	/* максимально соответствует ширине макета Figma */
 	margin: 0 auto;
-	/* центрируем по горизонтали */
 	padding: 60px 20px 100px;
-	/* отступ сверху/снизу, чтобы не прижалось вплотную к Header и футеру */
 }
 
 /* === 2. Стили заголовков разделов «Новинки», «Лучшие из лучших», «Скоро в продаже» === */
@@ -241,7 +233,6 @@
 .sectionTitle+.carouselWrapper {
 	margin-top: 100px;
 	margin-bottom: 100px;
-	/* 60px — можно отрегулировать под макет */
 }
 
 /* === 3. Карусельный контейнер (одиночный слайд) === */
@@ -258,7 +249,6 @@
 .slideContainer {
 	display: flex;
 	gap: 56px;
-	/* из макета расстояние между карточками */
 	justify-content: center;
 	align-items: flex-start;
 	white-space: nowrap;
@@ -269,12 +259,9 @@
 .productCase {
 	position: relative;
 	width: 237px;
-	/* из Figma: 237px (или близко) */
 	height: 522px;
-	/* фиксированная высота в соответствии с макетом */
 	background-color: #ffffff;
 	border-radius: 8px;
-	/* скругление из Figma */
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 	overflow: hidden;
 }
@@ -283,7 +270,6 @@
 .productPhoto {
 	width: 100%;
 	height: 70%;
-	/* 70% от общей высоты = ~365px */
 	object-fit: cover;
 	display: block;
 }
@@ -292,11 +278,8 @@
 .description {
 	position: absolute;
 	top: 366px;
-	/* примерно 70% высоты плюс небольшой отступ */
 	left: 16px;
-	/* отступ слева */
 	right: 16px;
-	/* чтобы текст не выходил за границы */
 	font-size: 18px;
 	font-weight: bold;
 	color: #000000;
@@ -325,7 +308,6 @@
 	font-size: 16px;
 	font-weight: 800;
 	color: #d33;
-	/* красно-бордовый, как в макете */
 }
 
 /* Кнопка «Купить» (фон) */
@@ -358,7 +340,6 @@
 	height: 32px;
 	line-height: 32px;
 	pointer-events: none;
-	/* чтобы нельзя было кликом попасть в текст, только в buyBox */
 	width: 46px;
 	font-family: 'Roboto Condensed';
 	text-align: left;

@@ -12,17 +12,17 @@ const Navbar:FunctionComponent = () => {
     		<div className={styles.navbar}>
       			<img className={styles.profileIcon} alt="" src="../public/images/profile.svg" onClick={onProfileClick} />
       			<div className={styles.searchbar}>
-        				<img className={styles.iconMagnifyingGlass} alt="" src={`🦆 icon "magnifying glass".svg`} />
+        				<img className={styles.iconMagnifyingGlass} alt="" src={`images/icon_magnifying_glass.svg`} />
         				<div className={styles.div}>Поиск</div>
       			</div>
       			<div className={styles.logo}>
-        				<img className={styles.logoIcon} alt="" src="Logo.svg" />
+        				<img className={styles.logoIcon} alt="" src="images/Logo.svg" />
         				<b className={styles.streetbook}>StreetBook</b>
         				<b className={styles.b}>Магазин современной литературы</b>
       			</div>
       			<div className={styles.backet} onClick={onProfileClick}>
-        				<img className={styles.backetChild} alt="" src="Rectangle 4.svg" />
-        				<img className={styles.iconCart} alt="" src={`🦆 icon "cart".svg`} />
+        				<img className={styles.backetChild} alt="" src="images/rectangle4.svg" />
+        				<img className={styles.iconCart} alt="" src={`images/icon_backet.svg`} />
         				<div className={styles.backetItem} />
         				<div className={styles.div1}>0</div>
       			</div>
