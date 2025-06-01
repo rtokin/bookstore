@@ -24,10 +24,10 @@ const Footer:FunctionComponent = () => {
       			</div>
       			<div className={styles.teh}>
         				<div className={styles.heftyfkgmailcom}>heft.yfk@gmail.com</div>
-        				<img className={styles.telegram1Icon} alt="" src="telegram 1.png" />
-        				<img className={styles.discord1Icon} alt="" src="discord 1.png" />
-        				<img className={styles.vk1Icon} alt="" src="vk 1.png" />
-        				<img className={styles.iconHeadphones} alt="" src={`🦆 icon "headphones".svg`} />
+        				<img className={styles.telegram1Icon} alt="" src="/images/telegram.svg" />
+        				<img className={styles.discord1Icon} alt="" src="/images/discord.svg" />
+        				<img className={styles.vk1Icon} alt="" src="/images/vk.svg" />
+        				<img className={styles.iconHeadphones} alt="" src={`/images/icon_headphones.svg`} />
       			</div>
     		</div>);
 };
