@@ -1,4 +1,3 @@
-// src/routes.tsx
 import React from "react"
 import {
   RootRoute,
@@ -8,8 +7,6 @@ import {
   RouterProvider,
 } from "@tanstack/react-router"
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools"
-
-// 1) Импорт всех наших страниц и компонентов
 import Header from "./components/Header"
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
@@ -21,15 +18,14 @@ import NotFound from "./pages/NotFound"
 
 export const rootRoute = new RootRoute({
   component: () => {
-    // Здесь модалка рендерится вне маршрутов (см. main.tsx),
-    // поэтому на уровне роутинга только <Outlet/>
+    // Здесь модалка рендерится вне маршрутов
     return <Outlet />
   },
 })
 
 export const homeRoute = new Route({
   getParentRoute: () => rootRoute,
-  path: "/", // URL = "/"
+  path: "/", 
   component: () => (
     <>
       <Header />

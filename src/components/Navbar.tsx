@@ -1,4 +1,3 @@
-// src/components/Navbar.tsx
 import React, { FunctionComponent, useCallback } from "react"
 import { useNavigate } from "@tanstack/react-router"
 import styles from "../styles/Navbar.module.css"

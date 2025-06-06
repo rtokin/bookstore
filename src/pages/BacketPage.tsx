@@ -1,4 +1,3 @@
-// src/pages/BacketPage.tsx
 import React from "react";
 import { useCart, CartItem as CartItemType } from "../contexts/CartContext";
 import { useNavigate } from "@tanstack/react-router";

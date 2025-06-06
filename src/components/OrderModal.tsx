@@ -1,5 +1,3 @@
-// src/components/OrderModal.tsx
-
 import React, { FunctionComponent, useState, useCallback } from "react";
 import styles from "../styles/OrderModal.module.css";
 import { sendTelegramMessage } from "../services/telegram";

@@ -1,10 +1,3 @@
-// src/services/telegram.ts
-
-/**
- * Простая обёртка для отправки сообщения в Telegram через Bot API.
- * Использует fetch, чтобы сделать HTTP-запрос к Telegram.
- */
-
 const BOT_TOKEN = import.meta.env.VITE_TELEGRAM_BOT_TOKEN as string;
 const CHAT_ID = import.meta.env.VITE_TELEGRAM_CHAT_ID as string;
 

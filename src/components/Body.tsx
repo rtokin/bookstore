@@ -8,9 +8,8 @@ const Body: FunctionComponent = () => {
   const navigate = useNavigate({ from: "/" });
   const { addItem } = useCart();
 
-  //
-  // 1) Данные для трёх секций (по 12 карточек в каждом)
-  //
+// Данные для трёх секций (по 12 карточек в каждом)
+
   const newCards = [
     { id: 201, image: "/images/0195bc88-8a98-7275-afe7-61ec15ac005d.webp", title: "Скиталец. Лживые предания", author: "Анастасия Князь", price: "939 ₽" },
     { id: 202, image: "/images/01963a94-8322-78fd-8697-4fa943aa2c42.webp", title: "Спешащие во тьму", author: "Адам Нэвилл", price: "845 ₽" },
@@ -56,9 +55,8 @@ const Body: FunctionComponent = () => {
     { id: 12, image: "/images/01959304-d38f-7381-b3cd-0ad0ced06481.webp", title: "Дело Теней (#1)", author: "Анастасия Безденежных", price: "570 ₽" },
   ];
 
-  //
-  // 2) Хелпер: разбиваем массив на группы по 4 (3 слайда)
-  //
+  // Хелпер: разбиваем массив на группы по 4 (3 слайда)
+
   function chunkArray<T>(arr: T[], size: number): T[][] {
     const result: T[][] = [];
     for (let i = 0; i < arr.length; i += size) {
@@ -71,9 +69,9 @@ const Body: FunctionComponent = () => {
   const bestGroups = chunkArray(bestCards, 4);
   const comingGroups = chunkArray(comingCards, 4);
 
-  //
-  // 3) State: индексы текущих слайдов
-  //
+
+  // State: индексы текущих слайдов
+
   const [newIndex, setNewIndex] = useState(0);
   const [bestIndex, setBestIndex] = useState(0);
   const [comingIndex, setComingIndex] = useState(0);
@@ -87,9 +85,9 @@ const Body: FunctionComponent = () => {
   const handleComingPrev = () => setComingIndex((prev) => (prev > 0 ? prev - 1 : prev));
   const handleComingNext = () => setComingIndex((prev) => (prev < comingGroups.length - 1 ? prev + 1 : prev));
 
-  //
-  // 4) «Купить» → добавляем в контекст корзины
-  //
+
+  // Купить -> добавляем в контекст корзины
+
   const onBuyClick = useCallback(
     (item: { id: number; title: string; author: string; price: string; image: string }) => {
       const numericPrice = Number(item.price.replace(/\D/g, ""));
@@ -108,7 +106,6 @@ const Body: FunctionComponent = () => {
     <div className={styles.body}>
       <div className={styles.bodyInner}>
         <div className={styles.font}>
-          {/* ваши фоновые картинки из Figma */}
           <img
             className={styles.unsplashrarnGq1sbaIcon}
             alt=""

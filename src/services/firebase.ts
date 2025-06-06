@@ -20,14 +20,13 @@ const firebaseConfig = {
     measurementId: "G-3PPK0BM7EN"
 };
 
-// ==================== 2) Инициализация Firebase App ====================
+// Инициализация
 const app = initializeApp(firebaseConfig);
 
-// ==================== 3) Получаем экземпляр Auth ====================
+// Получаем экземпляр Auth 
 const auth = getAuth(app);
 
-// ==================== 4) Экспорт функций для регистрации/входа ====================
-
+// Экспорт функций для регистрации/входа
 // Регистрирует нового пользователя через e-mail + пароль
 export function registerWithEmail(email: string, password: string) {
     return createUserWithEmailAndPassword(auth, email, password);
