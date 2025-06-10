@@ -9,7 +9,6 @@ import {
     User,
 } from "firebase/auth";
 
-
 const firebaseConfig = {
     apiKey: "AIzaSyDRS5quH0zsZMlxfpwlNc3W3R6x7zqX6fo",
     authDomain: "streetbook-e6099.firebaseapp.com",
