@@ -1,615 +1,175 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@700&display=swap');
+/* src/styles/Body.module.css */
 
-.unsplashrarnGq1sbaIcon {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	width: 1917px;
-	height: 789.3px;
-	object-fit: contain;
-	opacity: 0.1;
+/* 1) Переменные и сброс */
+:root {
+  --clr-primary: #29497F;
+  --clr-primary-light: #0F27A2;
+  --clr-text-light: #fff;
+  --clr-price: #D54A4A;
+  --ff-sans: 'Roboto Condensed', sans-serif;
+  --ff-serif: 'Roboto Serif', serif;
+
+  /* адаптивный размер стрелки */
+  --arrow-w: clamp(30px, 4vw, 60px);
+  --arrow-h: clamp(52.6px, 7vw, 80px);
 }
 
-.unsplashrarnGq1sbaIcon1 {
-	position: absolute;
-	top: 789.33px;
-	left: 0px;
-	width: 1917px;
-	height: 789.3px;
-	object-fit: contain;
-	opacity: 0.1;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.unsplashrarnGq1sbaIcon2 {
-	position: absolute;
-	top: 1578.67px;
-	left: 0px;
-	width: 1917px;
-	height: 789.3px;
-	object-fit: contain;
-	opacity: 0.1;
-}
-
-.unsplashDank9gjvdyIcon {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	width: 1917px;
-	height: 789.3px;
-	object-fit: contain;
-	opacity: 0.1;
-}
-
-.unsplashDank9gjvdyIcon1 {
-	position: absolute;
-	top: 789.33px;
-	left: 0px;
-	width: 1917px;
-	height: 789.3px;
-	object-fit: contain;
-	opacity: 0.1;
-}
-
-.unsplashDank9gjvdyIcon2 {
-	position: absolute;
-	top: 1578.67px;
-	left: 0px;
-	width: 1917px;
-	height: 789.3px;
-	object-fit: contain;
-	opacity: 0.1;
-}
-
-.font {
-	position: absolute;
-	top: 0px;
-	left: 2px;
-	width: 1917px;
-	height: 2368px;
-}
-
-.profileIcon {
-	position: absolute;
-	top: 22px;
-	right: 53px;
-	width: 61px;
-	height: 61px;
-	cursor: pointer;
-}
-
-.iconMagnifyingGlass {
-	width: 29px;
-	height: 30px;
-}
-
-.searchbar {
-	position: absolute;
-	top: 28px;
-	right: 331px;
-	border-radius: 30.23px;
-	background-color: #0f27a2;
-	width: 237px;
-	height: 53px;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: flex-start;
-	padding: 11px 21px;
-	box-sizing: border-box;
-	gap: 10px;
-}
-
-.logoIcon {
-	width: 52.5px;
-	position: relative;
-	max-height: 100%;
-	overflow: hidden;
-	flex-shrink: 0;
-}
-
-.streetbook {
-	position: relative;
-	text-shadow: 0px 2.1727077960968018px 2.17px rgba(0, 0, 0, 0.25);
-}
-
-
-.logo {
-	position: absolute;
-	top: 17px;
-	left: 40px;
-	width: 288px;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-	flex-wrap: wrap;
-	align-content: center;
-	gap: 0px 2.1px;
-	font-size: 52.14px;
-	color: #0f27a2;
-	font-family: 'Roboto Condensed';
-}
-
-.backetChild {
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	top: 0%;
-	right: 0%;
-	bottom: 0%;
-	left: 0%;
-	border-radius: 30.23px;
-	max-width: 100%;
-	overflow: hidden;
-	max-height: 100%;
-}
-
-.iconCart {
-	position: absolute;
-	width: 40.86%;
-	top: 13px;
-	right: 35.48%;
-	left: 23.66%;
-	max-width: 100%;
-	overflow: hidden;
-	height: 28.5px;
-}
-
-.backetItem {
-	position: absolute;
-	height: calc(100% - 31px);
-	width: calc(100% - 71px);
-	top: 3px;
-	right: 22px;
-	bottom: 28px;
-	left: 49px;
-	border-radius: 50%;
-	background-color: #d54a4a;
-}
-
-.backet {
-	position: absolute;
-	top: 28px;
-	right: 176px;
-	width: 93px;
-	height: 53px;
-	cursor: pointer;
-	font-size: 15.71px;
-}
-
-.navbar {
-	position: absolute;
-	width: calc(100% - 0.5px);
-	top: 0px;
-	right: 0.5px;
-	left: 0px;
-	box-shadow: 0px -17px 160.6px 4px rgba(0, 0, 0, 0.05) inset;
-	background-color: #fff;
-	height: 133px;
-	overflow: hidden;
-	color: #fff;
-	font-family: Roboto;
-}
-
-/* === 1. Общие стили контейнера страницы === */
+/* 2) Контейнер и фоновые слои */
 .body {
-	width: 100%;
-	background-color: #ffffff;
-	font-family: 'Roboto Condensed', sans-serif;
-	text-align: center;
-	box-sizing: border-box;
-	position: relative;
-	height: 2368px;
-	overflow: hidden;
-	flex-shrink: 0;
-	font-size: 20px;
-	color: #0f27a2;
+  position: relative;
+  width: 100%;
+  background: #fff;
+  font-family: var(--ff-sans);
+  overflow-x: hidden;
 }
-
-/* Обёртка всего контента внутри Body */
 .bodyInner {
-	max-width: 1440px;
-	margin: 0 auto;
-	padding: 60px 20px 100px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 60px 20px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
 }
 
-/* === 2. Стили заголовков разделов «Новинки», «Лучшие из лучших», «Скоро в продаже» === */
+/* 3) Секция */
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .sectionTitle {
-	width: 700px;
-	position: relative;
-	font-size: 48.38px;
-	font-family: 'Roboto Serif';
-	color: #0f27a2;
-	text-align: center;
-	align-items: center;
-	justify-content: center;
-	height: 124px;
+  font-family: var(--ff-serif);
+  font-size: clamp(32px, 4vw, 48px);
+  color: var(--clr-primary-light);
+  margin-bottom: 40px;
 }
 
-/* Каждый последующий заголовок получает отступ сверху,
-   чтобы секции не сливались друг с другом */
-.sectionTitle+.carouselWrapper {
-	margin-top: 100px;
-	margin-bottom: 100px;
-}
-
-/* === 3. Карусельный контейнер (одиночный слайд) === */
+/* 4) Карусель */
 .carouselWrapper {
-	position: relative;
-	width: 100%;
-	overflow: hidden;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-/* Обёртка всех карточек одного слайда */
+.sliderViewport {
+  overflow: hidden;
+  width: 100%;
+}
 .slideContainer {
-	display: flex;
-	gap: 56px;
-	justify-content: center;
-	align-items: flex-start;
-	white-space: nowrap;
-	/* чтобы карточки не переносились */
+  display: flex;
+  gap: 56px; /* ровно 56px между карточками */
+  justify-content: center;
 }
 
-/* === 4. Стили карточки товара (productCase) === */
-.productCase {
-	position: relative;
-	width: 237px;
-	height: 522px;
-	background-color: #ffffff;
-	border-radius: 8px;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-	overflow: hidden;
-}
-
-/* Обложка книги */
-.productPhoto {
-	width: 100%;
-	height: 70%;
-	object-fit: cover;
-	display: block;
-}
-
-/* Название книги */
-.description {
-	position: absolute;
-	top: 366px;
-	left: 16px;
-	right: 16px;
-	font-size: 18px;
-	font-weight: bold;
-	color: #000000;
-	line-height: 1.2;
-	margin-top: 5px;
-}
-
-/* Автор книги */
-.author {
-	position: absolute;
-	top: 402px;
-	/* чуть ниже названия */
-	left: 16px;
-	right: 16px;
-	font-size: 14px;
-	font-weight: 300;
-	color: #555555;
-	line-height: 1.2;
-}
-
-/* Цена книги */
-.price {
-	position: absolute;
-	top: 426px;
-	/* чуть выше звёздочек */
-	left: 16px;
-	font-size: 20px;
-	font-weight: 800;
-	color: #d33;
-}
-
-/* Кнопка «Купить» (фон) */
-.buyBox {
-	position: absolute;
-	bottom: 16px;
-	/* от низа карточки */
-	left: 50%;
-	transform: translateX(-50%);
-	width: 154px;
-	/* ширина из макета */
-	height: 32px;
-	/* высота из макета */
-	background-color: #0f27a1;
-	/* синий цвет кнопки */
-	border-radius: 16px;
-	cursor: pointer;
-}
-
-/* Текст «Купить» поверх кнопки */
-.buyText {
-	position: absolute;
-	bottom: 16px;
-	left: 50%;
-	transform: translateX(-50%);
-	font-size: 13px;
-	color: #ffffff;
-	font-weight: 300;
-	width: 154px;
-	height: 32px;
-	line-height: 32px;
-	pointer-events: none;
-	width: 46px;
-	font-family: 'Roboto Condensed';
-	text-align: left;
-	display: inline-block;
-}
-
-/* Контейнер для звёздочек (фон, серый прямоугольник) */
-.starBox {
-	position: absolute;
-	top: 450px;
-	/* чуть ниже цены */
-	left: 16px;
-	width: 100px;
-	height: 16px;
-	background-color: #ebebeb;
-	/* светло-серый фон */
-	border-radius: 6px;
-}
-
-/* Каждая звёздочка поверх starBox */
-.star1,
-.star2,
-.star3,
-.star4,
-.star5 {
-	position: absolute;
-	top: 450px;
-	width: 16px;
-	height: 16px;
-}
-
-.star1 {
-	left: 16px;
-}
-
-.star2 {
-	left: 36px;
-}
-
-.star3 {
-	left: 56px;
-}
-
-.star4 {
-	left: 76px;
-}
-
-.star5 {
-	left: 96px;
-}
-
-/* === 5. Навигационные стрелки «влево/вправо» === */
+/* 5) Стрелки */
 .arrowPrev,
 .arrowNext {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	width: 32px;
-	height: 32px;
-	cursor: pointer;
-	z-index: 10;
-	/* чтобы стрелки всегда были над карточками */
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--clr-primary-light);
+  width: var(--arrow-w);
+  height: var(--arrow-h);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.arrowPrev { margin-right: 16px; }
+.arrowNext { margin-left: 16px; }
+
+/* 6) Карточка */
+.productCase {
+  width: 251px;            /* строго по макету */
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.productPhoto {
+  width: 251px;            /* строго 251×378 */
+  height: 378px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.productInfo {
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;                /* равные отступы между описанием, автором, ценой */
+}
+.description {
+  font-size: clamp(18px, 2vw, 20px);
+  font-weight: 700;
+  color: #000;
+}
+.author {
+  font-size: clamp(12px, 1.2vw, 14px);
+  font-weight: 300;
+  color: #555;
+}
+.priceAndRating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.price {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--clr-price);
+}
+.stars {
+  display: flex;
+  gap: 4px;
+}
+.stars img {
+  width: 16px;
+  height: 16px;
+}
+.buyBox {
+  background: var(--clr-primary);
+  color: var(--clr-text-light);
+  border: none;
+  border-radius: 16px;
+  padding: 8px 0;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+}
+.buyBox:hover {
+  background: #1F3470;
 }
 
-.arrowPrev {
-	left: 16px;
-	/* слева в карусели */
-}
-
-.arrowNext {
-	right: 16px;
-	/* справа в карусели */
-}
-
-/* === 6. Адаптивность === */
+/* 7) Адаптив */
 @media (max-width: 1024px) {
-	.slideContainer {
-		gap: 40px;
-		/* чуть уменьшаем расстояние между карточками */
-	}
-
-	.productCase {
-		width: 200px;
-		height: 460px;
-	}
-
-	.description {
-		font-size: 16px;
-		top: 330px;
-	}
-
-	.author {
-		font-size: 13px;
-		top: 360px;
-	}
-
-	.price {
-		font-size: 15px;
-		top: 380px;
-	}
-
-	.buyBox,
-	.buyText {
-		width: 140px;
-		height: 30px;
-		bottom: 14px;
-		line-height: 30px;
-	}
-
-	.star1,
-	.star2,
-	.star3,
-	.star4,
-	.star5 {
-		top: 410px;
-		width: 14px;
-		height: 14px;
-	}
-
-	.star2 {
-		left: 34px;
-	}
-
-	.star3 {
-		left: 54px;
-	}
-
-	.star4 {
-		left: 74px;
-	}
-
-	.star5 {
-		left: 94px;
-	}
+  .slideContainer { gap: 40px; }
+  .productCase { width: 200px; }
+  .productPhoto { width: 200px; height: calc(200 * 378 / 251); }
 }
-
 @media (max-width: 768px) {
-	.slideContainer {
-		gap: 24px;
-		flex-wrap: wrap;
-		/* карточки перейдут на новую строку при необходимости */
-		justify-content: center;
-	}
-
-	.productCase {
-		width: 160px;
-		height: 380px;
-		margin-bottom: 40px;
-		/* отступ между «строками» карточек */
-	}
-
-	.description {
-		font-size: 14px;
-		top: 270px;
-	}
-
-	.author {
-		font-size: 12px;
-		top: 300px;
-	}
-
-	.price {
-		font-size: 14px;
-		top: 320px;
-	}
-
-	.buyBox,
-	.buyText {
-		width: 120px;
-		height: 28px;
-		bottom: 12px;
-		line-height: 28px;
-	}
-
-	.star1,
-	.star2,
-	.star3,
-	.star4,
-	.star5 {
-		top: 340px;
-		width: 12px;
-		height: 12px;
-	}
-
-	.star2 {
-		left: 30px;
-	}
-
-	.star3 {
-		left: 48px;
-	}
-
-	.star4 {
-		left: 66px;
-	}
-
-	.star5 {
-		left: 84px;
-	}
+  .slideContainer { flex-wrap: wrap; gap: 24px; justify-content: center; }
+  .productCase { width: 160px; margin-bottom: 40px; }
+  .productPhoto { width: 160px; height: calc(160 * 378 / 251); }
 }
-
 @media (max-width: 480px) {
-	.bodyInner {
-		padding: 40px 10px 60px;
-	}
-
-	.sectionTitle {
-		font-size: 32px;
-		margin-bottom: 16px;
-	}
-
-	.slideContainer {
-		flex-wrap: wrap;
-		gap: 16px;
-		justify-content: center;
-	}
-
-	.productCase {
-		width: 180px;
-		height: 420px;
-		margin-bottom: 30px;
-	}
-
-	.description {
-		font-size: 16px;
-		top: 290px;
-	}
-
-	.author {
-		font-size: 14px;
-		top: 320px;
-	}
-
-	.price {
-		font-size: 20px;
-		top: 340px;
-	}
-
-	.buyBox,
-	.buyText {
-		width: 130px;
-		height: 30px;
-		bottom: 14px;
-		line-height: 30px;
-	}
-
-	.star1,
-	.star2,
-	.star3,
-	.star4,
-	.star5 {
-		top: 360px;
-		width: 14px;
-		height: 14px;
-	}
-
-	.star2 {
-		left: 32px;
-	}
-
-	.star3 {
-		left: 54px;
-	}
-
-	.star4 {
-		left: 76px;
-	}
-
-	.star5 {
-		left: 98px;
-	}
+  .bodyInner { padding: 40px 10px 60px; }
+  .sectionTitle { font-size: 32px; margin-bottom: 16px; }
+  .slideContainer { gap: 16px; }
+  .productCase { width: 180px; margin-bottom: 30px; }
+  .productPhoto { width: 180px; height: calc(180 * 378 / 251); }
+  .buyBox { font-size: 12px; padding: 6px; }
 }
