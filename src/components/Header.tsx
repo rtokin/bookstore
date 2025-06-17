@@ -72,8 +72,6 @@ const Header: FunctionComponent = () => {
       <img
         className={styles.sideDownIcon}
         alt=""
-        src="../public/images/arrow1.svg"
-        onClick={onProfileContainerClick}
       />
     </div>
   )

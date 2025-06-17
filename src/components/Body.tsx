@@ -55,7 +55,7 @@ const Body: FunctionComponent = () => {
 
   const newCards = products.filter(p => p.id >= 200);
   const bestCards = products.filter(p => p.id >= 100 && p.id < 200);
-  const comingCards = products.filter(p => p.id < 100); // <- вот здесь исправили
+  const comingCards = products.filter(p => p.id < 100);
 
   const sections = [
     { title: "Новинки", groups: chunk(newCards, 4), index: newIndex, setIndex: setNewIndex },
@@ -88,7 +88,7 @@ const Body: FunctionComponent = () => {
                 onClick={() => goPrev(index, setIndex, groups)}
                 disabled={index === 0}
               >
-                ‹
+                <img src="/images/arrows_left.svg" alt="prev" />
               </button>
               <div className={styles.sliderViewport}>
                 <AnimatePresence initial={false} mode="wait">
@@ -139,7 +139,7 @@ const Body: FunctionComponent = () => {
                 onClick={() => goNext(index, setIndex, groups)}
                 disabled={index === groups.length - 1}
               >
-                ›
+                <img src="/images/arrows_right.svg" alt="next" />
               </button>
             </div>
           </section>

@@ -1,0 +1,60 @@
+.adminPage {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.formSection, .listSection {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+.formSection h2, .listSection h2 {
+  margin-bottom: 12px;
+}
+.formSection input,
+.formSection select {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  padding: 8px;
+  margin-bottom: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.formSection button {
+  margin-right: 8px;
+  padding: 8px 16px;
+  border: none;
+  background: #0f27a2;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.list {
+  list-style: none;
+}
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+.item button {
+  margin-left: 8px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 18px;
+}
+.message {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+}

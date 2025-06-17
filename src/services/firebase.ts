@@ -1,6 +1,5 @@
-// src/services/firebase.ts
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+import { getFirestore, doc, setDoc, deleteDoc } from "firebase/firestore";
 import {
   getAuth,
   createUserWithEmailAndPassword,
@@ -48,4 +47,27 @@ export function logout() {
 // 7) Listen to auth state
 export function onUserStateChanged(callback: (user: User | null) => void) {
   return onAuthStateChanged(auth, callback);
+}
+
+// 8) Admin helpers: create/update and delete product
+/**
+ * Добавить или обновить продукт в Firestore
+ */
+export async function addOrUpdateProduct(product: {
+  id: number;
+  title: string;
+  author: string;
+  image: string;
+  price: string;
+}) {
+  const ref = doc(db, "products", product.id.toString());
+  await setDoc(ref, product, { merge: true });
+}
+
+/**
+ * Удалить продукт по ID из Firestore
+ */
+export async function deleteProductById(id: number) {
+  const ref = doc(db, "products", id.toString());
+  await deleteDoc(ref);
 }
