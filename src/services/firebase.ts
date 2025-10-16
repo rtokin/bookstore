@@ -11,13 +11,13 @@ import {
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDRS5quH0zsZMlxfpwlNc3W3R6x9cX6fo",
+  apiKey: "AIzaSyDRS5quH0zsZMlxfpwlNc3W3R6x7zqX6fo",
   authDomain: "streetbook-e6099.firebaseapp.com",
   projectId: "streetbook-e6099",
-  storageBucket: "streetbook-e6099.appspot.com",
+  storageBucket: "streetbook-e6099.firebasestorage.app",
   messagingSenderId: "794950402770",
   appId: "1:794950402770:web:f43c2e68329bc2bdd4230b",
-  measurementId: "G-3PPK0BM7EN",
+  measurementId: "G-3PPK0BM7EN"
 };
 
 // 1) Initialize Firebase App
